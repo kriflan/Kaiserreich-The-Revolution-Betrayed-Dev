@@ -1,0 +1,43 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_Chen_Yun"
+		texturefile = "gfx//interface//ideas//cpc//Chen_Yun.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Xiang_Jingyu"
+		texturefile = "gfx//interface//ideas//cpc//Xiang_Jingyu.tga"
+	}	
+	spriteType = {
+		name = "GFX_cpcbigyuejin"
+		texturefile = "gfx//interface//cpc_bigyuejin.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_chenboda"
+		texturefile = "gfx//interface//ideas//cpc//chenboda.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gaogang"
+		texturefile = "gfx//interface//ideas//cpc//gaogang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_kangsheng"
+		texturefile = "gfx//interface//ideas//cpc//kangsheng.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Li_Fuchun"
+		texturefile = "gfx//interface//ideas//cpc//Li_Fuchun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_linbiao"
+		texturefile = "gfx//interface//ideas//cpc//linbiao.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liushaoqi"
+		texturefile = "gfx//interface//ideas//cpc//liushaoqi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_wangheshou"
+		texturefile = "gfx//interface//ideas//cpc//wangheshou.dds"
+	}
+}

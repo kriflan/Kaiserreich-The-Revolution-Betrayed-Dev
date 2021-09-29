@@ -1,0 +1,137 @@
+add_namespace = shanghaiqiyi
+country_event = {
+	id = shanghaiqiyi.1
+	title = shanghaiqiyi.1.t
+	desc = shanghaiqiyi.1.d
+	
+	fire_only_once = yes
+	trigger = {
+		tag = LEC
+		date > 1936.2.10
+		date < 1936.3.10
+		not = { has_country_flag = CHI_eco }
+	}
+	immediate = {
+		set_country_flag = CHI_eco
+	}	
+	option = {	
+		name = shanghaiqiyi.1.o1
+		country_event = { id = shanghaiqiyi.2 days = 3 }
+		
+		ai_chance = {
+			factor = 50
+			
+		}
+		
+	}
+	
+	option = {
+		name = shanghaiqiyi.1.o2
+		add_stability = 0.2
+		
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+}
+country_event = {
+	id = shanghaiqiyi.2
+	title = shanghaiqiyi.2.t
+	desc = shanghaiqiyi.2.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = shanghaiqiyi.2.o1
+		country_event = { id = shanghaiqiyi.3 days = 3 }
+		
+		ai_chance = {
+			factor = 50
+			
+		}
+		
+	}
+}
+country_event = {
+	id = shanghaiqiyi.3
+	title = shanghaiqiyi.3.t
+	desc = shanghaiqiyi.3.d
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			CPC = {
+				add_state_core = 743
+				transfer_state = 743
+				load_oob = "cpc_1936"
+			}
+			country_event = { id = shanghaiqiyi.4 days = 7 }
+			
+		}
+	}
+	option = {	
+		name = shanghaiqiyi.3.o1
+ 		CPC = { change_tag_from = ROOT }
+		
+		ai_chance = {
+			factor = 50
+			
+		}
+		
+	}
+	option = {	
+		name = shanghaiqiyi.3.o2
+		
+		ai_chance = {
+			factor = 50
+			
+		}
+		
+	}
+}
+country_event = {
+	id = shanghaiqiyi.4
+	title = shanghaiqiyi.4.t
+	desc = shanghaiqiyi.4.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = shanghaiqiyi.4.o1
+		every_state = {		
+			limit = {
+				is_core_of = LEC
+			}					
+			remove_core_of = LEC
+		}
+		LEP = {
+			transfer_state = 747
+			transfer_state = 746
+		}
+		GXC = {
+			transfer_state = 801
+		}
+		GEA = {
+			transfer_state = 326
+		}
+		every_country = {
+			remove_ideas = {
+				LEC_generic_open_door
+				LEC_USA_open_door
+				LEC_GER_open_door
+				
+			}
+		}
+		QIE = {
+			annex_country = {
+			    target = ROOT
+			    transfer_troops = no
+			}}
+			ai_chance = {
+				factor = 50
+				
+			}
+			
+	}
+}

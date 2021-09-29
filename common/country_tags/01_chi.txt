@@ -1,0 +1,1 @@
+CPC = "countries/Communist patry of China.txt"

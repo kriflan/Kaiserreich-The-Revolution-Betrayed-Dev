@@ -1,0 +1,59 @@
+CPC_war = {
+	icon = GFX_decision_chinese_flag
+	allowed = {
+		original_tag = CPC
+		
+		}
+}
+
+CPC_nongye = {
+	icon = GFX_decision_electrify
+	allowed = {
+		original_tag = CPC
+		
+	}
+	visible = {
+		not = {
+			has_completed_focus = CPC_chinasociali
+		}
+	}
+}
+
+CPC_zying = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+		original_tag = CPC
+		
+	}
+}
+
+CPC_shuchugeming = {
+	icon = GFX_decision_category_generic_communism
+	allowed = {
+		original_tag = CPC
+		
+	}
+}
+
+CPC_State_Planning_Commission = {
+	icon = GFX_decision_category_generic_industry
+	allowed = {
+		original_tag = CPC
+	}
+	visible = {
+		has_completed_focus = CPC_jihuawyh
+	}
+	
+}
+
+CPC_saomang_dec = {
+	icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+	picture = GFX_decision_cat_chinese_mass_exodus
+	allowed = {
+		original_tag = CPC
+	}
+	visible = {
+		has_completed_focus = CPC_saomang
+	}
+	
+}

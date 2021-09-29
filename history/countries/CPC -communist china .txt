@@ -1,0 +1,276 @@
+﻿capital = 613 # Nanjing as preferred capital, spawns via event in 1046 / Longyan
+set_technology = {
+	### Tanks ###
+	gwtank = 1
+	### Infantry ###
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	### Air ###
+	early_fighter = 1
+	early_bomber = 1
+}
+
+### Navy - MtG ###
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+
+		## Modules##
+		basic_depth_charges = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1
+	}
+}
+
+add_opinion_modifier = { target = SQI modifier = embargo }
+add_opinion_modifier = { target = QIE modifier = embargo }
+add_opinion_modifier = { target = LEP modifier = embargo }
+add_opinion_modifier = { target = ANQ modifier = embargo }
+set_variable = { kr_china_provinceintegration_cost_small = 50 }
+set_variable = { kr_china_provinceintegration_cost_medium = 80 }
+set_variable = { kr_china_provinceintegration_cost_large = 100 }
+set_variable = { kr_china_concessionintegration_cost = 15 }
+set_variable = { kr_china_provinceintegration_speed = 90 }
+set_variable = { kr_china_concessionintegration_speed = 60 }
+			set_variable = { army_reform_frame = 2 }
+			set_variable = { army_reform_var_org = -0.4 }
+			set_variable = { army_reform_var_exp = 0.60 }
+set_research_slots = 2
+set_convoys = 0 # gotta get that merchant marine together
+set_country_flag = china_integration_unlocked
+
+add_ideas = {
+	limited_exports
+	volunteer_only
+	partial_economic_mobilisation
+	CPC_workredarmy
+	CPC_shanghaipohuai
+	CPC_shumin
+	CPC_Li_Dazhao_hog_syn
+	CPC_Dong_Biwu_for_syn
+CPC_Li_Lisan_eco_tot
+CPC_Deng_Zhongxia_sec_syn
+china_inadequate_army_2	
+}
+
+set_politics = {
+	ruling_party = syndicalist
+	last_election = "1936.10.10"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 15
+	radical_socialist = 20
+	syndicalist = 28
+	social_democrat = 17
+	social_liberal = 10
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 10
+	paternal_autocrat = 0
+	national_populist = 0
+}
+set_cosmetic_tag = SHGS
+set_country_flag = is_chinese_tag
+create_country_leader = {
+	name = "戴笠"
+	desc = "POLITICS_CHI_DAI_CHUNFENG_DESC"
+	picture = "gfx/leaders/CHI/Portrait_CHI_Dai_Chunfeng.png"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+create_country_leader = {
+	name = "汪寿华"
+	desc = "POLITICS_CPC_WANG_SHOUHUA_DESC"
+	picture = "gfx/leaders/CPC/Wangshouhua.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+}
+create_country_leader = {
+	name = "汪精卫"
+	desc = ""
+	picture = "gfx/leaders/CHI/Portrait_CHI_Wang_Jingwei.png"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+create_country_leader = {
+	name = "宋庆龄"
+	desc = "POLITICS_CHI_SONG_QINGLING_DESC"
+	picture = "gfx/leaders/CHI/Portrait_CHI_Song_Qingling.png"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	female = yes
+}
+create_country_leader = {
+	name = "孙科"
+	desc = "POLITICS_CHI_SUN_FO_DESC"
+	picture = "gfx/leaders/CHI/Portrait_CHI_Sun_Fo.png"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = "林森"
+	picture = "gfx/leaders/CHI/Portrait_CHI_Lin_Sen.png"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+create_country_leader = {
+	name = "陈果夫"
+	picture = "gfx/leaders/CHI/Portrait_CHI_Chen_Guofu.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+### Corps Commanders ###
+create_corps_commander = {
+	name = "叶挺"
+	desc = ""
+	portrait_path = "gfx/leaders/CHI/Portrait_CHI_Ye_Ting.png"
+	traits = {
+		infantry_officer
+		commando
+		organizer
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "林彪"
+	desc = ""
+	portrait_path = "gfx/leaders/CHI/Portrait_CHI_Lin_Biao.png"
+	traits = {
+		brilliant_strategist
+		infantry_officer
+		trait_mountaineer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Leon Trotsky"
+	desc = "trotsky_desc"
+	portrait_path = "gfx/leaders/CPC/Leon_Trotsky.tga"
+	id = 1917
+	traits = {
+		brilliant_strategist
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "汪寿华"
+	desc = ""
+	portrait_path = "gfx/leaders/CPC/Wangshouhua.dds"
+	traits = {
+		brilliant_strategist
+		infantry_officer
+	}
+	id = 1927
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "罗亦农"
+	desc = ""
+	portrait_path = "gfx/leaders/CPC/Luoyinong.dds"
+	traits = {
+		brilliant_strategist
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "向警予"
+	desc = ""
+	portrait_path = "gfx/leaders/CPC/xiangjinyu.dds"
+	traits = {
+		brilliant_strategist
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "徐向前"
+	desc = ""
+	portrait_path = "gfx/leaders/CHI/Portrait_CHI_Xu_Xiangqian.png"
+	traits = {
+		trickster
+		commando
+		brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "陈独秀"
+	desc = ""
+	portrait_path = "gfx/leaders/CPC/Chen_Duxiu.tga"
+	id = 1942
+	traits = {
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "李大钊"
+	desc = ""
+	portrait_path = "gfx/leaders/CPC/Lidazhao.dds"
+	id = 1919
+	traits = {
+		trickster
+		brilliant_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 3
+}

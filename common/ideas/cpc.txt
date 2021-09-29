@@ -1,0 +1,947 @@
+ideas = {
+	country = {
+		CPC_workredarmy = {
+			name = "赤卫队"
+			picture = generic_syndicalist_militia 
+			modifier = {
+				army_org_factor = -0.25
+				army_attack_factor = -0.10
+				army_org_regain = 0.15
+			}
+		}
+		CPC_shanghaizhonggonghui = {
+			picture = generic_syndicalist_militia 
+			modifier = {
+				industrial_capacity_factory = -0.20
+				stability_factor = -0.30
+				war_support_factor = -0.15
+			}
+		}
+		CPC_workredarmy1 = {
+			name = "赤卫队"
+			picture = generic_syndicalist_militia 
+			modifier = {
+				army_org_factor = -0.15
+				army_attack_factor = -0.05
+				army_org_regain = 0.10
+			}
+		}
+		CPC_qvzxin = {
+			picture = generic_syndicalist_militia 
+			modifier = {
+				recon_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+		}
+		CPC_xjujung= {
+			picture = generic_syndicalist_militia 
+			modifier = {
+				combat_width_factor = -0.05
+				dig_in_speed_factor = 0.10
+			}
+		}
+		CPC_workredarmy4 = {
+			name = "赤卫队"
+			picture = generic_syndicalist_militia 
+			modifier = {
+				combat_width_factor = -0.05
+				dig_in_speed_factor = 0.10
+				recon_factor = 0.05
+				training_time_army_factor = -0.05
+				army_org_factor = -0.15
+				army_org_regain = 0.15
+				army_attack_factor = -0.05
+				conscription_factor = 0.10
+			}
+		}
+		CPC_navy_dmwa = {
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.15
+				navy_submarine_attack_factor = 0.10
+				navy_submarine_defence_factor = 0.10
+			}
+			picture = the_long_lance
+		}
+		CPC_zzwy = {
+			picture = generic_communist_army 
+			modifier = {
+				army_org_factor = 0.08
+				land_reinforce_rate = 0.10
+			}
+		}
+		CPC_sbwyh = {
+			picture = hol_haven_of_tolerance 
+			modifier = {
+				army_defence_factor = 0.10
+				experience_gain_army_factor = 0.10
+				planning_speed = 0.10
+			}
+		}
+		CPC_redarmy = {
+			picture = generic_communist_army
+			modifier = {
+				army_defence_factor = 0.10
+				experience_gain_army_factor = 0.10
+				planning_speed = 0.10
+				army_org_factor = 0.08
+				land_reinforce_rate = 0.10
+				army_attack_factor = 0.10
+			}
+		}
+		CPC_central_military_commission = {
+			
+			picture = generic_communism_drift_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+			}
+		}
+		league_collapse_CPC = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea league_collapse_ANQ"
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+			picture = generic_destruction
+			available = {
+				OR = {
+					CHI = {exists = yes }
+					ANQ = {exists = yes }
+					LEP = {exists = yes }
+				}
+			}
+			modifier = {
+				equipment_capture = 0.03
+				pocket_penalty = 0.5
+				army_speed_factor = 0.1
+				unit_limit_bonus = 20
+				army_attack_factor = 0.10
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.20
+					instant = yes
+				}
+			}}
+			CPC_workandnongmin	= {
+				picture = HOL_dutch_militia 
+				name = "工农联盟理论"
+				modifier = {
+					stability_factor = 0.05
+					
+				}
+				
+				targeted_modifier = {
+					tag = CHI
+					attack_bonus_against = 0.35
+					defense_bonus_against = 0.35
+				}
+				
+				targeted_modifier = {
+					tag = LEP
+					attack_bonus_against = 0.35
+					defense_bonus_against = 0.35
+				}
+				targeted_modifier = {
+					tag = ANQ
+					attack_bonus_against = 0.35
+					defense_bonus_against = 0.35
+				}
+				targeted_modifier = {
+					tag = SQI
+					attack_bonus_against = 0.35
+					defense_bonus_against = 0.35
+				}
+			}
+			CPC_workandnongmin2	= {
+				picture = HOL_dutch_militia 
+				name = "工农联盟理论"
+				modifier = {
+					stability_factor = 0.10
+					attrition = -0.1
+				}
+				targeted_modifier = {
+					tag = GXC
+					attack_bonus_against = 0.25
+					defense_bonus_against = 0.25
+				}
+				targeted_modifier = {
+					tag = SQI
+					attack_bonus_against = 0.35
+					defense_bonus_against = 0.35
+				}
+				targeted_modifier = {
+					tag = QIE
+					attack_bonus_against = 0.25
+					defense_bonus_against = 0.25
+				}
+				targeted_modifier = {
+					tag = FNG
+					attack_bonus_against = 0.25
+					defense_bonus_against = 0.25
+				}
+			}
+			CPC_fuli = {
+				picture = HOL_high_debt
+				modifier = {
+					stability_factor = 0.10
+					consumer_goods_factor = 0.05
+				}
+			}
+			CPC_funv = {
+				picture = generic_syndicalist_militia
+				modifier = {
+					conscription_factor = 0.10
+					industrial_capacity_factory = 0.05
+					political_power_factor = 0.25
+				}
+			}
+			CPC_nongyejitihua1 = {
+				picture = generic_migration
+				modifier = {
+					production_speed_buildings_factor = 0.03
+					production_factory_efficiency_gain_factor = 0.05
+				}
+			}
+			CPC_nongyejitihua2 = {
+				picture = generic_migration
+				modifier = {
+					production_speed_buildings_factor = 0.05
+					production_factory_efficiency_gain_factor= 0.05
+				}
+			}
+			CPC_nongyejitihua3 = {
+				picture = generic_migration
+				modifier = {
+					production_speed_buildings_factor = 0.08
+					production_factory_efficiency_gain_factor= 0.10
+				}
+			}
+			CPC_nongyejitihua4 = {
+				picture = generic_migration
+				modifier = {
+					production_speed_buildings_factor = 0.10
+					industrial_capacity_factory = 0.05
+					production_factory_max_efficiency_factor = -0.10
+					production_factory_efficiency_gain_factor= 0.10
+				}
+			}
+			CPC_datuh = {
+				picture = backward_industry 
+				modifier = {
+					min_export = -0.10
+					consumer_goods_factor = -0.05
+				}
+			}
+			CPC_cr = {
+				picture = generic_syndicalist_manpower
+				modifier = {
+					stability_factor = -0.20
+					political_power_factor = 0.25
+					totalist_drift = 0.01
+				}
+			}
+			CPC_huji = {
+				picture = MON_conscript_conquered 
+				modifier = {
+					stability_factor = 0.15
+					political_power_factor = 0.05
+					consumer_goods_factor = -0.05
+				}
+			}
+			CPC_bigyuejin_ideas = {
+				picture = generic_morale_bonus 
+				modifier = {
+					industrial_capacity_factory = 0.10
+					production_factory_max_efficiency_factor = -0.20
+					production_factory_efficiency_gain_factor = 0.10
+				}
+			}
+			CPC_nyejixh = {
+				picture = generic_agrarian_reform
+				modifier = {
+					industrial_capacity_factory = 0.10
+					industry_repair_factor = 0.25
+				}
+			}
+			CPC_huafei = {
+				picture = generic_agrarian_reform
+				modifier = {
+					production_speed_industrial_complex_factor = 0.10
+					monthly_population = 0.25
+				}
+			}
+			CPC_kongzi = {
+				picture = DEI_independence_unity_vl 
+				modifier = {
+					stability_factor = 0.1
+					war_support_factor = 0.1
+					political_power_factor = 0.25
+					consumer_goods_factor = 0.05
+				}
+			}
+			CPC_marxlenninism = {
+				picture = HOL_totalist_military 
+				modifier = {
+					conscription_factor = 0.06
+					war_support_factor = -0.1
+					political_power_cost = -0.25
+				}
+			}
+			CPC_zongghui = {
+				picture = generic_syndicalism_drift_bonus 
+				modifier = {
+					production_factory_efficiency_gain_factor = 0.1
+					political_power_factor = 0.10
+					industrial_capacity_factory = 0.05
+				}
+			}
+			CPC_erwu = {
+				picture = debts 
+				modifier = {
+					consumer_goods_factor = 0.05
+					production_speed_buildings_factor = 0.10
+				}
+			}
+			CPC_shanghaipohuai = {
+				picture = generic_crippled_industry 
+				modifier = {
+					industrial_capacity_factory = -0.10
+					production_speed_buildings_factor = -0.10
+				}
+			}
+			CPC_shumin = {
+				picture = generic_radical_socialist_revolution 
+				modifier = {
+					stability_factor = 0.05
+					political_power_factor = 0.10
+					resistance_damage_to_garrison = -0.15
+				}
+			}
+			CPC_nongyegj = {
+				picture = raj_risk_of_famine
+				available = {
+					num_of_factories <60
+				}
+				modifier = {
+					conscription_factor = -0.25
+					production_speed_arms_factory_factor = -0.10
+					production_speed_dockyard_factor = -0.20
+					production_speed_fuel_silo_factor = -0.20
+					production_speed_synthetic_refinery_factor = -0.20
+					consumer_goods_factor = 0.10
+				}
+			}
+			CPC_dajihuang = {
+				picture = raj_risk_of_famine
+				modifier = {
+					industrial_capacity_factory = -0.10
+					production_speed_buildings_factor = -0.20
+					monthly_population = -0.50
+					consumer_goods_factor = 0.20
+					political_power_factor = -0.10
+					production_factory_efficiency_gain_factor = -0.20
+					production_factory_max_efficiency_factor = -0.20
+					line_change_production_efficiency_factor = -0.20
+				}
+			}
+			CPC_wenmang1 = {
+				picture = prc_low_popular_support
+				name = cpc_wenmang			
+				modifier = {
+					industrial_capacity_factory = -0.10
+					production_speed_buildings_factor = -0.15
+					research_speed_factor = -0.20
+					political_power_factor = -0.10
+					production_factory_efficiency_gain_factor = -0.20
+					production_factory_max_efficiency_factor = -0.20
+					line_change_production_efficiency_factor = -0.20
+				}
+			}
+			CPC_wenmang2 = {
+				picture = prc_low_popular_support
+				name = cpc_wenmang			
+				modifier = {
+					industrial_capacity_factory = -0.10
+					production_speed_buildings_factor = -0.1
+					research_speed_factor = -0.15
+					political_power_factor = -0.10
+					production_factory_efficiency_gain_factor = -0.1
+					production_factory_max_efficiency_factor = -0.1
+					line_change_production_efficiency_factor = -0.1
+				}
+			}
+			CPC_wenmang3 = {
+				picture = prc_low_popular_support
+				name = cpc_wenmang			
+				modifier = {
+					industrial_capacity_factory = -0.10
+					production_speed_buildings_factor = -0.1
+					research_speed_factor = -0.1
+					production_factory_efficiency_gain_factor = -0.1
+					production_factory_max_efficiency_factor = -0.1
+					line_change_production_efficiency_factor = -0.1
+				}
+			}
+			CPC_wenmang4 = {
+				picture = prc_low_popular_support
+				name = cpc_wenmang			
+				modifier = {
+					production_speed_buildings_factor = -0.1
+					research_speed_factor = -0.05
+				}
+			}
+			CPC_inte = {
+				picture = generic_constitutional_guarantees
+				available = {
+					QIE = {exists = yes }
+					NOT = {		
+						608 = {
+							is_owned_by = CPC
+						}
+					}
+					
+				}			
+				modifier = {
+					industrial_capacity_factory = -0.05
+					min_export = -0.20
+					research_speed_factor = -0.10
+					trade_opinion_factor = -0.20
+				}
+				targeted_modifier = {
+					tag = FRA
+					trade_opinion_factor = 0.30
+					extra_trade_to_target_factor = 0.10
+				}
+				targeted_modifier = {
+					tag = ENG
+					trade_opinion_factor = 0.30
+					extra_trade_to_target_factor = 0.10
+				}
+				targeted_modifier = {
+					tag = SRI
+					trade_opinion_factor = 0.30
+					extra_trade_to_target_factor = 0.10
+				}
+				targeted_modifier = {
+					tag = SOV
+					trade_opinion_factor = 0.30
+					extra_trade_to_target_factor = 0.10
+				}
+				targeted_modifier = {
+					tag = HND
+					trade_opinion_factor = 0.30
+					extra_trade_to_target_factor = 0.10
+				}
+			}
+	}
+	head_of_government = {
+		CPC_Zhouenlai_hog = {
+			allowed = { original_tag = CPC }
+			picture = CHI_Zhou_Enlai_for_rso
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				totalist
+				hog_reformist_soldier
+			}
+		}
+		CPC_linbiao_hog = {
+			allowed = { original_tag = CPC }
+			picture = linbiao		
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				totalist
+				hog_old_general
+			}
+		}
+		CPC_Liushaoqi_hog = {
+			allowed = { original_tag = CPC }
+			picture = liushaoqi		
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				totalist
+				hog_corporate_suit
+			}
+		}
+		CPC_Shao_Shiping_hog_syn = {
+			allowed = { original_tag = CPC }
+			picture = CHI_Shao_Shiping_hog_syn		
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Shao_Shiping_hog_syn"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_reformist_soldier
+			}
+		}
+		CPC_Li_Fuchun_hog_rso = {
+			allowed = { original_tag = CPC }
+			picture = CHI_Li_Fuchun_hog_rso
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				syndicalist
+				hog_silent_workhorse
+			}
+		}
+		CPC_Li_Dazhao_hog_syn = {
+			allowed = { original_tag = CPC }
+			picture = CHI_Li_Dazhao_hog_syn
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_flamboyant_tough_guy
+			}
+		}
+		
+		
+	}
+	person_of_influence = { ### Person of Influence ###
+		CPC_Dong_Biwu_for_syn = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			picture = CHI_Dong_Biwu_for_syn
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Dong_Biwu_for_syn"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_ideological_crusader
+			}
+		}
+		CPC_Qu_Qiubai_for_syn = {
+			allowed = { original_tag = CPC }
+			picture = CHI_Qu_Qiubai_for_syn
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Qu_Qiubai_for_syn"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_apologetic_clerk
+			}
+		}
+		CPC_Su_Zhaozheng_for_syn = {
+			picture = CPC_Su_Zhaozheng_for_syn
+			allowed = { original_tag = CHI }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Su_Zhaozheng_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+		CPC_Li_Lisan_eco_tot = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = CHI_Li_Lisan_eco_tot
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Lisan_eco_tot"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_planned_economy_proponent
+			}
+		}
+		CPC_Gao_gang_eco = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = gaogang
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				totalist
+				eco_industrialiser
+			}
+		}
+		CPC_Chenyun_eco = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = Chen_Yun
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_democrat
+				eco_keynesian_economy
+			}
+		}
+		CPC_wangheshou_eco = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = wangheshou
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				totalist
+				eco_corrupt_kleptocrat
+			}
+		}
+		CPC_Li_Fuchun_eco = {
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = Li_Fuchun
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				totalist
+				eco_balanced_budget_economy
+			}
+		}
+		CPC_Deng_Zihui_eco_syn = {
+			picture =  CHI_Deng_Zihui_eco_syn
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Deng_Zihui_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_mixed_economy
+			}
+		}
+		CPC_Deng_Xiaoping_eco_rso = {
+			picture = CHI_Deng_Xiaoping_eco_rso
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Deng_Xiaoping_eco_rso"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_laissez_faire_capitalist
+			}
+		}
+		CPC_Deng_Zhongxia_sec_syn = {
+			picture = CPC_Deng_Zhongxia_sec_syn
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = CHI_Deng_Zhongxia_sec_syn
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Deng_Zhongxia_sec_syn"
+			}
+			traits = {
+				security_minister
+				syndicalist
+				sec_crime_fighter
+			}
+		}
+		CPC_Hua_Kezhi_sec_syn = {
+			picture = CHI_Hua_Kezhi_sec_syn
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Hua_Kezhi_sec_syn"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_back_stabber
+			}
+		}
+		CPC_Kangsheng_sec = {
+			picture = kangsheng
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Lei_Jingtian_sec_rso"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_efficient_sociopath
+			}
+		}
+		CPC_Xiangjingyu_sec = {
+			picture = Xiang_Jingyu
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Lei_Jingtian_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_man_of_the_people
+			}
+		}
+		CPC_Lei_Jingtian_sec_rso = {
+			picture = CHI_Lei_Jingtian_sec_rso
+			allowed = { original_tag = CPC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Lei_Jingtian_sec_rso"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	chief_of_staff = { ### Chief of Staff ###
+		
+		CPC_Li_Jishen_cos = {
+			allowed = { original_tag = CPC }
+			available = { }
+			picture =CHI_Li_Jishen_cos
+			visible = {
+				NOT = { has_country_flag = Li_Jishen_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Jishen_cos"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+			cancel_if_invalid = yes
+		}
+		CPC_Zuo_Quan_cos = {
+			allowed = { original_tag = CPC }
+			available = { }
+			picture =CHI_Zuo_Quan_cos
+			visible = {
+				NOT = { has_country_flag = Zuo_Quan_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Zuo_Quan_cos"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	chief_of_army = { ### Chief of Army ###
+		CPC_Chen_Geng_carm = {
+			allowed = { original_tag = CPC }
+			available = { }
+			picture =	CHI_Chen_Geng_carm	
+			visible = {
+				NOT = { has_country_flag = Chen_Geng_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Chen_Geng_carm"
+			}
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+		CPC_Jiang_Xianyun_carm = {
+			allowed = { original_tag = CPC }
+			available = { }
+			picture =	CHI_Jiang_Xianyun_carm	
+			visible = {
+				NOT = { has_country_flag = Jiang_Xianyun_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Jiang_Xianyun_carm"
+			}
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+		CPC_Zeng_Zhongsheng_carm = {
+			allowed = { original_tag = CPC }
+			available = { }
+			picture =	CHI_Zeng_Zhongsheng_carm	
+			visible = {
+				NOT = { has_country_flag = Zeng_Zhongsheng_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Zeng_Zhongsheng_carm"
+			}
+			traits = {
+				chief_of_army
+				carm_doctrine_of_autonomy
+			}
+			cancel_if_invalid = yes
+		}
+		
+	}
+	
+	chief_of_navy = { ### Chief of Navy ###
+		CPC_Deng_Zhaoxiang_cnav = {
+			allowed = { original_tag = CPC }
+			picture =	CHI_Deng_Zhaoxiang_cnav	
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Deng_Zhaoxiang_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CPC_Deng_Zhaoxiang_cnav"
+			}
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	chief_of_air_force = { ### Chief of Air Force ###
+		CPC_Fang_Ziyi_cair = {
+			allowed = { original_tag = CPC }
+			picture =CHI_Fang_Ziyi_cair		
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Fang_Ziyi_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CHI_Fang_Ziyi_cair"
+			}
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+}

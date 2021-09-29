@@ -1,0 +1,127 @@
+
+# MAIN THEME
+music = {
+	name = "东方红"
+	file = "chi11.ogg"
+	volume = 0.65
+}
+music = {
+	name = "三大纪律八项注意"
+	file = "chi16.ogg"
+	volume = 0.65
+}
+music = {
+	name = "长城谣"
+	file = "chi17.ogg"
+	volume = 0.65
+}
+music = {
+	name = "春天的故事"
+	file = "chi12.ogg"
+	volume = 0.65
+}
+music = {
+	name = "全世界无产者联合起来"
+	file = "chi13.ogg"
+	volume = 0.65
+}
+music = {
+	name = "歌唱祖国"
+	file = "chi15.ogg"
+	volume = 0.65
+}
+music = {
+	name = "走进新时代"
+	file = "chi14.ogg"
+	volume = 0.65
+}
+music = {
+	name = "唐朝乐队——国际歌"
+	file = "tangchao.ogg"
+	volume = 0.65
+}
+music = {
+	name = "L'International"
+	file = "Les Sans Culottes - L'International.ogg"
+	volume = 0.65
+}
+music = {
+	name = "国际歌_俄语"
+	file = "russiainte.ogg"
+	volume = 0.65
+}
+music = {
+	name = "莫斯科——北京"
+	file = "mowbei.ogg"
+	volume = 0.65
+}
+music = {
+	name = "中国人民解放军军歌"
+	file = "chi1.ogg"
+	volume = 0.65
+}
+music = {
+	name = "中国人民志愿军战歌"
+	file = "chi2.ogg"
+	volume = 0.65
+}
+music = {
+	name = "毛主席的战士最听党的话"
+	file = "chi3.ogg"
+	volume = 0.65
+}
+music = {
+	name = "没有共产党就没有新中国"
+	file = "chi4.ogg"
+	volume = 0.65
+}
+music = {
+	name = "苏联颂"
+	file = "ussr.ogg"
+	volume = 0.65
+}
+music = {
+	name = "团结就是力量"
+	file = "chi5.ogg"
+	volume = 0.65
+}
+music = {
+	name = "十送红军"
+	file = "chi6.ogg"
+	volume = 0.65
+}
+music = {
+	name = "惊雷——未遂"
+	file = "trotsky.ogg"
+	volume = 0.65
+}
+music = {
+	name = "咱们工人有力量"
+	file = "chi7.ogg"
+	volume = 0.65
+}
+music = {
+	name = "中华人民共和国国歌"
+	file = "china.ogg"
+	volume = 0.65
+}
+music = {
+	name = "毕业歌"
+	file = "chi8.ogg"
+	volume = 0.65
+}
+music = {
+	name = "国际歌"
+	file = "chi9.ogg"
+	volume = 0.65
+}
+music = {
+	name = "社会主义好"
+	file = "chi10.ogg"
+	volume = 0.65
+}
+music = {
+	name = "自动化"
+	file = "Automation.ogg"
+	volume = 0.65
+}

@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_TNO_er"
+		texturefile = "gfx//interface//music//tnoer.png"
+		noOfFrames = 2
+	}
+}

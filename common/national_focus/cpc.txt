@@ -1,0 +1,4052 @@
+focus_tree = {
+	id = cpc_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CPC
+		}
+	}
+	focus = {
+		id = CPC_shanghai
+		icon = revolutionary_government
+		x = 0
+		y = -2
+		
+		cost = 1.5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			remove_ideas = CPC_shanghaipohuai
+			country_event = { id = cpc.7 days = 2 }
+			add_ideas = league_collapse_CPC
+			LEP = {			
+				declare_war_on = {
+					target = CPC
+					type = annex_everything
+				}
+			}
+			ANQ = {
+				declare_war_on = {
+					target = CPC
+					type = annex_everything
+				}
+			}
+			hidden_effect = {
+				news_event = {id = cpc.22 days = 3 }
+				
+			}
+		}
+	}
+	focus = {
+		id = CPC_gaizupatry
+		icon = communist_party_of_china
+		x = -2
+		y = 1
+		mutually_exclusive = {focus = CPC_joinkmt}
+		prerequisite = {focus = CPC_shanghai}
+		relative_position_id = CPC_shanghai
+		
+		cost = 2.5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			always = no
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_party_name = { ideology = totalist name = CPC_C long_name = CPC_C_L  }
+			set_party_name = { ideology = syndicalist name = CPC_S long_name = CPC_S_L  }
+			set_party_name = { ideology = radical_socialist name = CPC_L long_name = CPC_L_L  }
+			set_cosmetic_tag = CPC
+			set_politics = {
+				ruling_party = radical_socialist
+			}
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = 0.10}
+			hidden_effect = {
+				CHI = {
+					create_country_leader = {
+						name = "Wang Jingwei"
+						desc = "POLITICS_CHI_WANG_JINGWEI_2_DESC"
+						picture = "gfx/leaders/CHI/Portrait_CHI_Wang_Jingwei.png"
+						expire = "1965.1.1"
+						ideology = authoritarian_democrat_subtype
+					}
+					set_politics = {
+						ruling_party = authoritarian_democrat
+						last_election = "1925.10.10"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 800
+						producer = JAP
+					}
+					load_focus_tree = generic_focus
+					set_popularities = {
+						totalist = 0
+						radical_socialist = 0
+						syndicalist = 0
+						social_democrat = 0
+						social_liberal = 10
+						market_liberal = 10
+						social_conservative = 10
+						authoritarian_democrat = 50
+						paternal_autocrat = 20
+						national_populist = 0
+					}
+				}
+				create_country_leader = {
+					name = "周恩来"
+					desc = "POLITICS_CPC_ZHOUENLAI_DESC"
+					picture = "gfx/leaders/CPC/Zhou_Enlai.tga"
+					expire = "1965.1.1"
+					ideology = totalist_subtype
+					traits = {
+						hog_gentleman_politician
+					}
+				}
+				create_country_leader = {
+					name = "李尧棠"
+					desc = "POLITICS_CPC_BAJING_DESC"
+					picture = "gfx/leaders/CPC/lixiaotang.tga"
+					expire = "1965.1.1"
+					ideology = syndicalist_subtype
+					traits = {
+						hog_naive_optimist
+					}
+				}
+				create_country_leader = {
+					name = "陈独秀"
+					desc = "POLITICS_CPC_CHEN_DUXIU_DESC"
+					picture = "gfx/leaders/CPC/Chen_Duxiu.tga"
+					expire = "1965.1.1"
+					ideology = radical_socialist_subtype
+					traits = {
+						hog_architect_of_the_union
+					}
+				}
+				
+			}
+			
+		}
+	}
+	focus = {
+		id = CPC_duoqvdgzy
+		icon = GFX_goal_LEC_strikeAOG
+		x = -2
+		y = 2
+		prerequisite = {focus = CPC_gaizupatry}
+		relative_position_id = CPC_shanghai
+		
+		cost = 2.5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 800
+				producer = LEC
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			
+			hidden_effect = {
+				country_event = {id = cpc.19 days = 3 }
+			}
+		}
+	}
+	focus = {
+		id = CPC_workandnm
+		icon = GFX_GBR_fate_of_unions
+		x = 4
+		y = 2
+		prerequisite = {focus = CPC_gaizupatry}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_workandnongmin
+		}
+	}
+	focus = {
+		id = CPC_china_tudi
+		icon = GFX_focus_generic_agriculture
+		x = 4
+		y = 3
+		prerequisite = {focus = CPC_workandnm}
+		relative_position_id = CPC_shanghai
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			LEP = { exists = NO }
+			CHI = { exists = NO }
+			ANQ = { exists = NO }
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CPC_workandnongmin2
+				remove_idea = CPC_workandnongmin
+				
+			}
+		}
+	}
+	focus = {
+		id = CPC_datuh
+		icon = GFX_goal_LEP_against_yiguandao
+		x = 3
+		y = 4
+		prerequisite = {focus = CPC_china_tudi}
+		mutually_exclusive = {focus = CPC_erwu}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_datuh
+		}
+	}
+	focus = {
+		id = CPC_erwu
+		icon = GFX_goal_PAL_Irrigation_Program
+		x = 5
+		y = 4
+		prerequisite = {focus = CPC_china_tudi}
+		mutually_exclusive = {focus = CPC_datuh}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_erwu
+		}
+	}
+	focus = {
+		id = CPC_hezs
+		icon = anarchist_economy
+		x = 4
+		y = 5
+		prerequisite = {focus = CPC_erwu focus = CPC_datuh}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = hezuoshe
+		}
+	}
+	focus = {
+		id = CPC_spzbj
+		icon = GFX_goal_LEP_selective_enforcement
+		x = -3
+		y = 3
+		prerequisite = {focus = CPC_duoqvdgzy}
+		mutually_exclusive = {focus = CPC_mzzcjj }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = 0.03}
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.03}
+		}
+	}	
+	
+	focus = {
+		id = CPC_mzzcjj
+		icon = GFX_goal_OTT_Loosen_Policy
+		x = 0
+		y = 3
+		prerequisite = {focus = CPC_duoqvdgzy}
+		mutually_exclusive = {focus = CPC_spzbj }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 80
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.03}
+			add_popularity = {
+				ideology = social_democrat
+			popularity = 0.03}
+		}
+	}		
+	focus = {
+		id = CPC_wcjjzz
+		icon = GFX_goal_revolution_tools
+		x = -3
+		y = 4
+		prerequisite = {focus = CPC_spzbj}
+		mutually_exclusive = {focus = CPC_rmmzzz }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = 0.10}
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.10}
+			
+			custom_effect_tooltip = cpc_core1
+			hidden_effect = {
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_small = -10 }
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_medium = -10 }
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_large = -10 }
+				add_to_variable = { CHI.kr_china_concessionintegration_cost = -5 }
+			}
+		}
+	}	
+	focus = {
+		id = CPC_chinagh
+		icon = GFX_goal_NOR_Sosialdemokratisk_Arbeiderparti
+		x = -5
+		y = 5
+		prerequisite = {focus = CPC_wcjjzz}
+		mutually_exclusive = {focus = CPC_wcjjxfd }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.05
+			}
+			add_ideas = CPC_zongghui
+			set_party_name = { ideology = syndicalist name = CPC_ACFTU long_name = CPC_ACFTU_L  }
+		}
+	}	
+	focus = {
+		id = CPC_gtzyyz
+		icon = GFX_goal_CSA_victory
+		x = -5
+		y = 6
+		prerequisite = {focus = CPC_chinagh}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {add_popularity = {
+			ideology = syndicalist
+		popularity = 0.05}
+		add_political_power = 50
+		
+		}
+	}
+	focus = {
+		id = CPC_wcjjxfd
+		icon = GFX_goal_Communist_Discourse
+		x = -3
+		y = 5
+		prerequisite = {focus = CPC_wcjjzz focus = CPC_rmmzzz}
+		mutually_exclusive = {focus = CPC_chinagh focus = CPC_xishoukmt }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.05}
+		add_political_power = 50
+		}
+	}	
+	focus = {
+		id = CPC_lnzy
+		icon = communist_scientists
+		x = -3
+		y = 6
+		prerequisite = {focus = CPC_wcjjxfd}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.05}
+		add_ideas = CPC_marxlenninism
+		}
+	}	
+	focus = {
+		id = CPC_xishoukmt
+		icon = GFX_Goal_Kuomintang_Government_Initiative
+		x = 0
+		y = 5
+		prerequisite = {focus = CPC_rmmzzz}
+		mutually_exclusive = {focus = CPC_wcjjxfd }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			CHI = {exists = no }
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			create_corps_commander = {
+				name = "Zhang Yunyi"
+				desc = "POLITICS_CHI_ZHANG_YUNYI_ARMY_DESC"
+				portrait_path = "gfx/leaders/CHI/Portrait_CHI_Zhang_Yunyi.PNG"
+				traits = {
+					war_hero
+					career_officer
+					organizer
+					trickster
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Sun Liren"
+				desc = "POLITICS_CHI_SUN_LIREN_ARMY_DESC"
+				portrait_path = "gfx/leaders/CHI/Portrait_CHI_Sun_Liren.PNG"
+				traits = {
+					career_officer
+					brilliant_strategist
+					organizer
+					urban_assault_specialist
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Xue Yue"
+				desc = "POLITICS_CHI_XUE_YUE_ARMY_DESC"
+				portrait_path = "gfx/leaders/CHI/Portrait_CHI_Xue_Yue.PNG"
+				traits = {
+					offensive_doctrine
+					trait_reckless
+					brilliant_strategist
+					war_hero
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 3
+			}
+			
+			create_corps_commander = {
+				name = "Zhang Fakui"
+				desc = "POLITICS_CHI_ZHANG_FAKUI_ARMY_DESC"
+				portrait_path = "gfx/leaders/CHI/Portrait_CHI_Zhang_Fakui.PNG"
+				traits = {
+					war_hero
+					infantry_officer
+					harsh_leader
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			create_navy_leader = {
+				name = "Chen Shaokuan"
+				desc = "POLITICS_CHI_CHEN_SHAOKUAN_NAVY_DESC"
+				portrait_path = "gfx/leaders/CHI/Portrait_CHI_Chen_Shaokuan.PNG"
+				traits = {
+					blockade_runner
+					navy_career_officer
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 3
+				coordination_skill = 2
+			}
+		}
+	}	
+	focus = {
+		id = CPC_chinasociali
+		icon = dragon
+		x = 0
+		y = 6
+		prerequisite = {focus = CPC_xishoukmt}
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = totalist
+				last_election = "1936.10.10"
+				election_frequency = 60
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.10}
+			hidden_effect = {
+				remove_ideas = {
+					CPC_Li_Dazhao_hog_syn
+					CPC_Dong_Biwu_for_syn
+					CPC_Li_Lisan_eco_tot
+					CPC_Deng_Zhongxia_sec_syn
+					
+				}
+				add_ideas = {
+					CPC_Liushaoqi_hog
+					CPC_Qu_Qiubai_for_syn
+					CPC_Li_Lisan_eco_tot
+					CPC_Kangsheng_sec
+				}
+				
+			}
+			add_ideas = CPC_kongzi
+		}
+	}		
+	
+	focus = {
+		id = CPC_rmmzzz
+		icon = GFX_goal_red_star_dove
+		x = 0
+		y = 4
+		prerequisite = {focus = CPC_spzbj focus = CPC_mzzcjj}
+		mutually_exclusive = {focus = CPC_wcjjzz }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.05}
+		}
+	}	
+	
+	#新政府
+	focus = {
+		id = CPC_new_china
+		icon = one_china_policy
+		x = 3
+		y = 7
+		prerequisite = {focus = CPC_gtzyyz focus = CPC_lnzy focus = CPC_chinasociali}
+		prerequisite = {focus = CPC_hezs }
+		relative_position_id = CPC_shanghai
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_cosmetic_tag = CPC_rev
+			custom_effect_tooltip = gengjudi
+			hidden_effect = {
+				add_ideas ={ 
+					CPC_wenmang1
+					CPC_nongyegj
+					
+				}}
+		}
+	}	
+	#经济
+	focus = {
+		id = CPC_one_five_plan
+		icon = five_year_plan
+		x = -6
+		y = 1
+		prerequisite = {focus = CPC_new_china}
+		relative_position_id = CPC_new_china
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state =  {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	focus = {
+		id = CPC_jihuawyh
+		icon = central_planned_economy2
+		x = 0
+		y = 1
+		prerequisite = {focus = CPC_one_five_plan}
+		relative_position_id = CPC_one_five_plan
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan4 value = 0.10 }
+			add_dynamic_modifier = {
+				modifier = CPC_plan_ecm
+			}
+			custom_effect_tooltip = cpc_plan4_10_tt
+			unlock_decision_category_tooltip = CPC_State_Planning_Commission
+			
+		}
+	}	
+	focus = {
+		id = CPC_zlgs
+		icon = dragon
+		x = 2
+		y = 2
+		prerequisite = {focus = CPC_jihuawyh}
+		relative_position_id = CPC_one_five_plan
+		mutually_exclusive = {focus = CPC_3yuanzhu }
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_government = totalist
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan1 value = -0.05 }
+			custom_effect_tooltip = cpc_plan1_5_tt
+		}
+	}	
+	focus = {
+		id = CPC_qpgyh
+		icon = central_planned_economy
+		x = -1
+		y = 1
+		prerequisite = {focus = CPC_zlgs}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = {
+					not = { has_idea = CPC_nongyejitihua1
+						has_idea = CPC_nongyejitihua2
+						has_idea = CPC_nongyejitihua3
+						has_idea = CPC_nongyejitihua4
+					}
+				}
+				add_ideas = CPC_nongyejitihua1
+			}	
+			
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua1  }
+				remove_ideas = CPC_nongyejitihua1
+				add_ideas = CPC_nongyejitihua2
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua2  }
+				remove_ideas = CPC_nongyejitihua2
+				add_ideas = CPC_nongyejitihua3
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua3  }
+				remove_ideas = CPC_nongyejitihua3
+				add_ideas = CPC_nongyejitihua4
+			}
+		}
+	}
+	focus = {
+		id = CPC_jitihuafast
+		icon = agriculture
+		x = 1
+		y = 1
+		prerequisite = {focus = CPC_zlgs}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			if = {
+				limit = {
+					not = { has_idea = CPC_nongyejitihua1
+						has_idea = CPC_nongyejitihua2
+						has_idea = CPC_nongyejitihua3
+						has_idea = CPC_nongyejitihua4
+					}
+				}
+				add_ideas = CPC_nongyejitihua1
+			}	
+			
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua1  }
+				remove_ideas = CPC_nongyejitihua1
+				add_ideas = CPC_nongyejitihua2
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua2  }
+				remove_ideas = CPC_nongyejitihua2
+				add_ideas = CPC_nongyejitihua3
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua3  }
+				remove_ideas = CPC_nongyejitihua3
+				add_ideas = CPC_nongyejitihua4
+			}
+		}
+	}
+	focus = {
+		id = CPC_shzygz
+		icon = communism3
+		x = 0
+		y = 2
+		prerequisite = {focus = CPC_jitihuafast}
+		prerequisite = {focus = CPC_qpgyh}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan3 value = 0.10 }
+			custom_effect_tooltip = cpc_plan3_10_tt
+			if = {
+				limit = {
+					not = { has_idea = CPC_nongyejitihua1
+						has_idea = CPC_nongyejitihua2
+						has_idea = CPC_nongyejitihua3
+						has_idea = CPC_nongyejitihua4
+					}
+				}
+				add_ideas = CPC_nongyejitihua1
+			}	
+			
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua1  }
+				remove_ideas = CPC_nongyejitihua1
+				add_ideas = CPC_nongyejitihua2
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua2  }
+				remove_ideas = CPC_nongyejitihua2
+				add_ideas = CPC_nongyejitihua3
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua3  }
+				remove_ideas = CPC_nongyejitihua3
+				add_ideas = CPC_nongyejitihua4
+			}
+		}
+	}
+	focus = {
+		id = CPC_huji
+		icon = self_management
+		x = -1
+		y = 3
+		prerequisite = {focus = CPC_shzygz}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_huji
+		}
+	}
+	focus = {
+		id = CPC_zsfzxx
+		icon = judiciary
+		x = 1
+		y = 3
+		prerequisite = {focus = CPC_shzygz}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = CPC_bigyuejin
+		icon = communism6
+		x = 0
+		y = 4
+		prerequisite = {focus = CPC_huji}
+		prerequisite = {focus = CPC_zsfzxx}
+		relative_position_id = CPC_zlgs
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_bigyuejin_ideas
+			custom_effect_tooltip = CPC_bigyuejin_tt
+			if = {
+				limit = {
+					not = { has_idea = CPC_nongyejitihua1
+						has_idea = CPC_nongyejitihua2
+						has_idea = CPC_nongyejitihua3
+						has_idea = CPC_nongyejitihua4
+					}
+				}
+				add_ideas = CPC_nongyejitihua1
+			}	
+			
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua1  }
+				remove_ideas = CPC_nongyejitihua1
+				add_ideas = CPC_nongyejitihua2
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua2  }
+				remove_ideas = CPC_nongyejitihua2
+				add_ideas = CPC_nongyejitihua3
+			}
+			else_if = {
+				limit = {has_idea = CPC_nongyejitihua3  }
+				remove_ideas = CPC_nongyejitihua3
+				add_ideas = CPC_nongyejitihua4
+			}
+			hidden_effect = {
+				remove_ideas = CPC_Li_Lisan_eco_tot
+				add_ideas = CPC_wangheshou_eco
+				country_event = { id = cpc.24 days = 30 }
+			}
+		}
+	}
+	focus = {
+		id = CPC_3yuanzhu
+		icon = GFX_DAH_FR_Prod
+		x = -2
+		y = 2
+		prerequisite = {focus = CPC_jihuawyh}
+		relative_position_id = CPC_one_five_plan
+		mutually_exclusive = {focus = CPC_zlgs }
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				has_government = syndicalist
+				has_government = radical_socialist
+			}
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+			add_to_variable = { var = CPC_research value = 0.05 }
+			custom_effect_tooltip = cpc_plan6_5_tt
+			add_research_slot = 1
+		}
+	}	
+	focus = {
+		id = CPC_gyhzs
+		icon = anarchist_economy
+		x = -1
+		y = 1
+		prerequisite = {focus = CPC_3yuanzhu}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state =  {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CPC_jixiehua
+		icon = wheat_field
+		x = 1
+		y = 1
+		prerequisite = {focus = CPC_3yuanzhu}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_nyejixh
+		}
+	}
+	focus = {
+		id = CPC_jitiqiye
+		icon = forced_labour
+		x = 0
+		y = 2
+		prerequisite = {focus = CPC_gyhzs}
+		prerequisite = {focus = CPC_jixiehua}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan5 value = 0.10 }
+			custom_effect_tooltip = cpc_plan5_10_tt
+		}
+	}
+	focus = {
+		id = CPC_shzyysjl
+		icon = communist_factories
+		x = -1
+		y = 3
+		prerequisite = {focus = CPC_jitiqiye}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan1 value = -0.05 }
+			custom_effect_tooltip = cpc_plan1_5_tt
+		}
+	}
+	focus = {
+		id = CPC_yinruhuafei
+		icon = agriculture2
+		x = 1
+		y = 3
+		prerequisite = {focus = CPC_jitiqiye}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_huafei
+		}
+	}
+	focus = {
+		id = CPC_antibaoban
+		icon = communist_repression
+		x = 0
+		y = 4
+		prerequisite = {focus = CPC_yinruhuafei}
+		prerequisite = {focus = CPC_shzyysjl}
+		relative_position_id = CPC_3yuanzhu
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = totalist
+			popularity = -0.05}
+			add_popularity = {
+				ideology = authoritarian_democrat
+			popularity = -0.05}
+		}
+	}
+	#社会革命
+	focus = {
+		id = CPC_saomang
+		icon = brain_power
+		x = 0
+		y = 1
+		prerequisite = {focus = CPC_new_china}
+		relative_position_id = CPC_new_china
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = shaomang
+		}
+	}	
+	focus = {
+		id = CPC_shfl
+		icon = GFX_goal_socialist_infrastructure
+		x = 0
+		y = 2
+		prerequisite = {focus = CPC_saomang}
+		relative_position_id = CPC_new_china
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_fuli
+		}
+	}	
+	focus = {
+		id = CPC_pingquan
+		icon = GFX_socialist_constitution
+		x = 0
+		y = 3
+		prerequisite = {focus = CPC_shfl}
+		relative_position_id = CPC_new_china
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_funv
+		}
+	}	
+	#统一中国
+	focus = {
+		id = CPC_dadaodgzy
+		icon = maoism2
+		x = 3
+		y = 1
+		prerequisite = {focus = CPC_new_china}
+		relative_position_id = CPC_new_china
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_completed_focus = CPC_jihuawyh
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = china
+			hidden_effect = {
+				every_state = {		
+					limit = {
+						is_claimed_by = FNG
+					}					
+					add_claim_by = CPC
+				}
+				every_state = {		
+					limit = {
+						is_core_of = FNG
+					}					
+					add_claim_by = CPC
+				}
+				
+			}						
+		}
+	}	
+	
+	focus = {
+		id = CPC_jirfangliaguang
+		icon = YUN_GFX_Goal_Secure_Southern_China
+		x = -1
+		y = 1
+		prerequisite = {focus = CPC_dadaodgzy}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 4.4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			OR = {
+				
+				GXC = { exists = NO }
+				has_war_with = PRC
+				has_war_with = GXC
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = guangdong
+		}
+	}	
+	focus = {
+		id = CPC_hunan
+		icon = GFX_YUN_goal_attack_hunnan
+		x = 1
+		y = 1
+		prerequisite = {focus = CPC_dadaodgzy}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 5.4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			OR = {
+				HNN = { exists = NO }
+				has_war_with = HNN
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = hunan
+		}
+	}	
+	focus = {
+		id = CPC_jirfangxinan
+		icon = GFX_goal_CHI_plan_western
+		x = 3
+		y = 1
+		prerequisite = {focus = CPC_dadaodgzy}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			SZC = { exists = NO }
+			YUN = { exists = NO }
+			
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = xinan
+		}
+	}		
+	
+	focus = {
+		id = CPC_qie
+		icon = GFX_goal_QIE_zhili
+		x = 1
+		y = 2
+		prerequisite = {focus = CPC_jirfangxinan}
+		prerequisite = {focus = CPC_hunan}
+		prerequisite = {focus = CPC_jirfangliaguang}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		bypass = {
+			OR = {
+				QIE = { exists = NO }
+				has_war_with = QIE
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			declare_war_on = {
+				target = QIE
+				type = annex_everything
+			}
+		}
+	}		
+	focus = {
+		id = CPC_dongbei
+		icon =  YUN_GFX_Goal_Secure_Northern_China
+		x = 0
+		y = 3
+		prerequisite = {focus = CPC_qie}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 8
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			
+		}
+		
+		bypass = {
+			OR = {
+				FNG = { exists = NO }
+				has_war_with = FNG
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = dongbei
+		}
+	}	
+	focus = {
+		id = CPC_shanxi
+		icon = GFX_goal_china_yan_xishan
+		x = 2
+		y = 3
+		prerequisite = {focus = CPC_qie}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			
+		}
+		
+		bypass = {
+			OR = {
+				SHX = { exists = NO }
+				has_war_with = SHX
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			SHX = {
+				country_event = { id = cpc.5 days = 3 }
+				
+			}	}
+	}	
+	focus = {
+		id = CPC_majia
+		icon = YUN_GFX_Goal_Secure_Western_China
+		x = -1
+		y = 4
+		prerequisite = {focus = CPC_dongbei focus = CPC_shanxi}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			
+		}
+		
+		bypass = {
+			XSM = { exists = NO }
+			AND = {		     
+				ETS = { exists = NO }
+				SIK = { exists = NO }
+				
+				KUM = { exists = NO }
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = xibei
+		}
+	}	
+	focus = {
+		id = CPC_shoufutib
+		icon = YUN_GFX_Goal_Secure_Tibet
+		x = 1
+		y = 4
+		prerequisite = {focus = CPC_dongbei focus = CPC_shanxi}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			has_war = no
+			is_neighbor_of = TIB
+			
+		}
+		
+		bypass = {
+			TIB = { exists = NO }
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			if = {
+				limit = {
+					TIB = {
+						OR = {
+							has_socialist_government = yes 
+							has_government = social_democrat
+						}
+					}
+				}
+				annex_country = {
+					target = TIB
+					transfer_troops = no
+				}
+			}				
+			else_if = {
+				limit = {
+					TIB = {
+						OR = {
+							has_socialist_government = no
+							not = {has_government = social_democrat}
+						}
+					}
+				}
+				TIB = {
+					country_event = { id = cpc.5 days = 3 }
+				}
+			}		
+			
+			
+		}
+	}			
+	focus = {
+		id = CPC_shoufumon
+		icon = GFX_goal_MON_mongolia_flag
+		x = 3
+		y = 4
+		prerequisite = {focus = CPC_dongbei focus = CPC_shanxi}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 7
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			is_neighbor_of = MON
+			has_war = no
+			
+		}
+		
+		bypass = {
+			MON = { exists = NO }
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			MON = {
+				country_event = { id = cpc.5 days = 3 }
+				
+			}
+			
+		}
+	}
+	
+	#解放全中国以后
+	focus = {
+		id = CPC_qgrmdbdh
+		icon = communist_china
+		x = 1
+		y = 5
+		prerequisite = {focus = CPC_shoufumon focus = CPC_shoufutib focus = CPC_majia}
+		relative_position_id = CPC_dadaodgzy
+		
+		cost = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			QIE = { exists = NO }
+			owns_state = 608
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		select_effect = {
+			country_event = { id = cpc.14 days = 10 }
+		}
+		completion_reward = {
+			add_stability = 0.05
+			news_event = cpc.21
+		}
+	}		
+	#政治
+	focus = {
+		id = CPC_lianbang
+		icon = GFX_goal_red_star_green_wreath
+		x = -1
+		y = 1
+		prerequisite = {focus = CPC_qgrmdbdh}
+		mutually_exclusive = {focus = CPC_danyizhi}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_country_flag = feb
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_cosmetic_tag = SOC
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = CPC_ssmzghg
+		icon = parliament_box
+		x = -2
+		y = 2
+		prerequisite = {focus = CPC_lianbang}
+		mutually_exclusive = {focus = CPC_mzqyzz}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_country_flag = ssmzghg
+			owns_state = 322
+			owns_state = 617
+			owns_state = 330
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			TIB = {
+				remove_all_ministers = yes
+				set_cosmetic_tag = SOC_TIB
+				set_politics = {
+					ruling_party = syndicalist
+					last_election = "1936.10.10"
+					election_frequency = 60
+					elections_allowed = yes
+				}
+				load_focus_tree = generic_focus
+				remove_state_core = 353
+				remove_state_core = 604
+				add_state_core = 858
+				add_state_core = 324
+				add_state_core = 888
+				hidden_effect = {
+					set_party_name = { ideology = syndicalist name = SOC_TIB_syndicalist_party long_name = SOC_TIB_syndicalist_party_long  }
+					set_party_name = { ideology = radical_socialist name = SOC_TIB_radical_socialist_party long_name = SOC_TIB_radical_socialist_party_long  }
+					set_party_name = { ideology = totalist name = SOC_TIB_totalist_party long_name = SOC_TIB_totalist_party_long  }
+					create_country_leader = {
+						name = "Püncog Wanggyai"
+						desc = ""
+						picture = "gfx/leaders/TIB/Portrait_Püncog_Wanggyai.tga"
+						expire = "1965.1.1"
+						ideology = syndicalist_subtype
+						traits = {
+						}
+					}
+					create_country_leader = {
+						name = "Püncog Wanggyai"
+						desc = ""
+						picture = "gfx/leaders/TIB/Portrait_Püncog_Wanggyai.tga"
+						expire = "1965.1.1"
+						ideology = radical_socialist_subtype
+						traits = {
+						}
+					}
+					create_country_leader = {
+						name = "Ngapoi Ngawang Jigme"
+						desc = ""
+						picture = "gfx/leaders/TIB/Portrait_Ngapoi_Ngawang_Jigme.dds"
+						expire = "1965.1.1"
+						ideology = totalist_subtype
+						traits = {
+						}
+					}
+					add_ideas = TIB_Getag_Tulku_hog_rso
+					add_ideas = TIB_Sangye_Yeshi_eco_rso
+					add_ideas = TIB_Thubten_Kunphela_sec_rso
+				}
+			}
+			#release_puppet = TIB
+			release_autonomy = {
+				target = TIB
+				autonomy_state = autonomy_ssmzghg
+				freedom_level = 0.5
+			}
+			
+			SIK = {
+				remove_all_ministers = yes
+				set_cosmetic_tag = SOC_SIK
+				set_politics = {
+					ruling_party = syndicalist
+					last_election = "1936.10.10"
+					election_frequency = 60
+					elections_allowed = yes
+				}
+				load_focus_tree = generic_focus
+				add_state_core = 1042
+				add_state_core = 589
+				add_state_core = 586
+				add_state_core = 617
+				add_state_core = 618
+				add_state_core = 619
+				add_state_core = 1083
+				add_state_core = 1085
+				add_state_core = 897
+				add_state_core = 287
+				hidden_effect = {
+					set_party_name = { ideology = syndicalist name = SOC_SIK_syndicalist_party long_name = SOC_SIK_syndicalist_party_long  }
+					set_party_name = { ideology = radical_socialist name = SOC_SIK_radical_socialist_party long_name = SOC_SIK_radical_socialist_party_long  }
+					set_party_name = { ideology = totalist name = SOC_SIK_totalist_party long_name = SOC_SIK_totalist_party_long  }
+					remove_mission = SIK_remove_mongol_mission
+					
+				}
+			}
+			#release_puppet = SIK
+			release_autonomy = {
+				target = SIK
+				autonomy_state = autonomy_ssmzghg
+				freedom_level = 0.5
+			}
+			
+			MON = {
+				remove_all_ministers = yes
+				set_cosmetic_tag = SOC_MON
+				set_politics = {
+					ruling_party = syndicalist
+					last_election = "1936.10.10"
+					election_frequency = 60
+					elections_allowed = yes
+				}
+				load_focus_tree = generic_focus
+				remove_state_core = 612
+				remove_state_core = 348
+				remove_state_core = 616
+				remove_state_core = 621
+				remove_state_core = 1083
+				remove_state_core = 618
+				remove_state_claim = 1083
+				remove_state_claim = 618
+				hidden_effect = {
+					set_party_name = { ideology = syndicalist name = SOC_MON_syndicalist_party long_name = SOC_MON_syndicalist_party_long  }
+					set_party_name = { ideology = radical_socialist name = SOC_MON_radical_socialist_party long_name = SOC_MON_radical_socialist_party_long  }
+					set_party_name = { ideology = totalist name = SOC_MON_totalist_party long_name = SOC_MON_totalist_party_long  }
+					add_ideas = MON_Dashdorjiin_Natsagdorj_hog_syn
+					add_ideas = MON_Rinchingiin_Elbegdorj_for_syn
+					add_ideas = MON_Dansranbilegiin_Dogsom_eco_syn
+					add_ideas = MON_Bat_Ochiryn_Eldev_Ochir_sec_rso
+				}
+			}
+			#release_puppet = MON
+			release_autonomy = {
+				target = MON
+				autonomy_state = autonomy_ssmzghg
+				freedom_level = 0.5
+			}
+			create_faction = "CPC_zhshzylb"
+			add_to_faction = TIB
+			add_to_faction = SIK
+			add_to_faction = MON
+		}
+	}
+	focus = {
+		id = CPC_mzqyzz
+		icon = GFX_goal_ideology_libsoc
+		x = 0
+		y = 2
+		prerequisite = {focus = CPC_danyizhi focus = CPC_lianbang}
+		mutually_exclusive = {focus = CPC_ssmzghg focus = CPC_mzth}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_country_flag = mzqyzz
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.10
+			custom_effect_tooltip = cpc_core1
+			hidden_effect = {
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_small = -10 }
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_medium = -10 }
+				add_to_variable = { CHI.kr_china_provinceintegration_cost_large = -10 }
+				add_to_variable = { CHI.kr_china_concessionintegration_cost = -5 }
+			}
+		}
+	}
+	focus = {
+		id = CPC_mzth
+		icon = GFX_goal_refugee_management
+		x = 2
+		y = 2
+		prerequisite = {focus = CPC_danyizhi}
+		mutually_exclusive = {focus = CPC_mzqyzz}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_country_flag = hanhua
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_war_support = 0.05
+			
+			
+		}
+	}
+	focus = {
+		id = CPC_danyizhi
+		icon = GFX_goal_HOL_council_communism
+		x = 1
+		y = 1
+		prerequisite = {focus = CPC_qgrmdbdh}
+		mutually_exclusive = {focus = CPC_lianbang}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_country_flag = danyi
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_cosmetic_tag = CPC_PRC
+		}
+	}	
+	
+	focus = {
+		id = CPC_laolianhui
+		icon = GFX_focus_HOL_deal_with_left
+		x = -2
+		y = 3
+		prerequisite = {focus = CPC_ssmzghg}
+		mutually_exclusive = {focus = CPC_wcjjyihui}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_government = syndicalist
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.10}
+			add_to_variable = { var = CPC_plan2 value = 0.10 }
+			custom_effect_tooltip = cpc_plan2_10_tt
+		}
+	}
+	focus = {
+		id = CPC_jieshan
+		icon = GFX_goal_HOL_crackdown_totalist
+		x = -2
+		y = 4
+		prerequisite = {focus = CPC_laolianhui}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = -0.10
+			set_party_name = { ideology = totalist name = "极权派" long_name = "极权派"  }
+			set_party_name = { ideology = syndicalist name = "工团派" long_name = "工团派"  }
+			set_party_name = { ideology = radical_socialist name = "列宁派" long_name = "列宁派"  }
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.10}
+			add_popularity = {
+				ideology = totalist
+			popularity = -0.10}
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = -0.05}
+		}
+	}		
+	focus = {
+		id = CPC_gtzy
+		icon = GFX_goal_ideology_syndicalist
+		x = -2
+		y = 5
+		prerequisite = {focus = CPC_jieshan}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_cosmetic_tag = CPC_sy
+			add_political_power = 120
+		}
+	}
+	
+	
+	
+	
+	
+	focus = {
+		id = CPC_wcjjyihui
+		icon = election2
+		x = 0
+		y = 3
+		prerequisite = {focus = CPC_ssmzghg focus = CPC_mzqyzz}
+		mutually_exclusive = {focus = CPC_laolianhui focus = CPC_zzj}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_government = radical_socialist
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.03}
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = 0.10}
+		}
+	}
+	focus = {
+		id = CPC_wcjjddz
+		icon = democratic_communism
+		x = 0
+		y = 4
+		prerequisite = {focus = CPC_wcjjyihui}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_politics = {
+				ruling_party = radical_socialist
+				last_election = "1936.10.10"
+				election_frequency = 60
+				elections_allowed = yes
+			}
+			add_political_power = 100
+			country_event = cpc.23
+		}
+	}	
+	focus = {
+		id = CPC_wcjjmz
+		icon = communism5
+		x = 0
+		y = 5
+		prerequisite = {focus = CPC_wcjjddz}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_research value = 0.05 }
+			custom_effect_tooltip = cpc_plan6_5_tt
+			add_stability = 0.10
+			
+		}
+	}	
+	focus = {
+		id = CPC_zzj
+		icon = communist_purge
+		x = 2
+		y = 3
+		prerequisite = {focus = CPC_mzqyzz focus = CPC_mzth}
+		mutually_exclusive = {focus = CPC_wcjjyihui}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_government = totalist
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.10}
+		}
+	}
+	focus = {
+		id = CPC_patry
+		icon = GFX_goal_ideology_totalist
+		x = 2
+		y = 4
+		prerequisite = {focus = CPC_zzj}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan1 value = -0.05 }
+			custom_effect_tooltip = cpc_plan1_5_tt
+		}
+	}	
+	focus = {
+		id = CPC_xieshan
+		icon = GFX_goal_government_icon
+		x = 2
+		y = 5
+		prerequisite = {focus = CPC_patry}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}	
+	#外交
+	focus = {
+		id = CPC_waijiao
+		icon = GFX_goal_generic_government_deals
+		x = 8
+		y = 1
+		prerequisite = {focus = CPC_qgrmdbdh}
+		relative_position_id = CPC_qgrmdbdh
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_war_support = 0.10	
+			
+		}
+	}	
+	focus = {
+		id = CPC_yibiandao
+		icon = GFX_goal_FRA_Internationale_Congress
+		x = -1
+		y = 1
+		prerequisite = {focus = CPC_waijiao}
+		mutually_exclusive = {focus = CPC_lingqiluzhao}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			FRA = { exists = YES }
+			OR = {
+				not = {has_government = totalist }
+				FRA = {
+					has_country_leader = {
+						name = "Georges Valois"
+						ruling_only = yes
+					}
+				}
+			}}
+			
+			bypass = {
+			}
+			
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+			
+			completion_reward = {
+				FRA = {
+					add_to_faction = CPC
+					
+				}
+			}
+	}
+	focus = {
+		id = CPC_jion_fra
+		icon = socialist_science
+		x = -1
+		y = 2
+		prerequisite = {focus = CPC_yibiandao}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_research_slot = 1
+			set_temp_variable = { CPC_num_target_states = 2 }
+			set_variable = { CPC.FRA_num_target_states = 2 }
+			FRA_phalanstere_effect = yes
+			
+			
+		}
+	}
+	focus = {
+		id = CPC_eu_inc
+		icon = GFX_goal_syndicalist_workers
+		x = -1
+		y = 3
+		prerequisite = {focus = CPC_jion_fra}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_research value = 0.05 }
+			custom_effect_tooltip = cpc_plan6_5_tt
+			every_owned_state = {
+				limit = {
+					has_resources_amount = {
+						resource = steel
+						amount > 1
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+		}
+	}
+	focus = {
+		id = CPC_lingqiluzhao
+		icon = GFX_goal_generic_join_faction
+		x = 1
+		y = 1
+		prerequisite = {focus = CPC_waijiao}
+		mutually_exclusive = {focus = CPC_yibiandao}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			OR = {
+				has_government = totalist 
+				
+				not = {
+					and = {
+						has_government = totalist
+						FRA = {
+							has_country_leader = {
+								name = "Georges Valois"
+								ruling_only = yes
+							}
+						}}
+				}
+			}
+		}
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+				target = FRA
+				modifier = CHI_SYND_MAD
+			}
+			
+			add_opinion_modifier = {
+				target = FRA
+				modifier = CHI_SYND_MAD
+			}
+		}
+	}
+	focus = {
+		id = CPC_shanghaihezuo
+		icon = sco
+		x = 1
+		y = 2
+		prerequisite = {focus = CPC_lingqiluzhao}
+		relative_position_id = CPC_waijiao
+		mutually_exclusive = {focus =CPC_the4International }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			create_faction = "上海合作组织"
+			unlock_decision_category_tooltip = CPC_zying
+			
+		}
+	}
+	focus = {
+		id = CPC_ameica
+		icon = align_to_america2
+		x = 1
+		y = 3
+		prerequisite = {focus = CPC_shanghaihezuo}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan1 value = -0.05 }
+			custom_effect_tooltip = cpc_plan1_5_tt
+			USA = {
+				remove_opinion_modifier = {
+					target = CPC
+					modifier = embargo
+				}
+			}
+			remove_opinion_modifier = {
+				target = USA
+				modifier = embargo
+			}
+		}
+	}
+	focus = {
+		id = CPC_the4International
+		icon = fourth_international
+		x = 3
+		y = 2
+		prerequisite = {focus = CPC_lingqiluzhao}
+		relative_position_id = CPC_waijiao
+		mutually_exclusive = {focus =CPC_shanghaihezuo }
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_government = radical_socialist
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			create_faction = "第四国际"
+			unlock_decision_category_tooltip = CPC_zying
+		}
+	}
+	focus = {
+		id = CPC_marxism
+		icon = marxism
+		x = 3
+		y = 3
+		prerequisite = {focus = CPC_the4International}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_to_variable = { var = CPC_plan2 value = 0.10 }
+		custom_effect_tooltip = cpc_plan2_10_tt	}
+	}
+	focus = {
+		id = CPC_yuanzhuydu
+		icon = GFX_goal_HOL_military_union
+		x = -2
+		y = 4
+		prerequisite = {focus = CPC_ameica focus = CPC_eu_inc focus = CPC_marxism}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = ydu
+		}
+	}
+	focus = {
+		id = CPC_dadaorib
+		icon = attack_japan2
+		x = 0
+		y = 4
+		prerequisite = {focus = CPC_ameica focus = CPC_eu_inc focus = CPC_marxism}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			NOT = { has_global_flag = JAP_Fading_Sun }
+			
+		}
+		
+		bypass = {
+			JAP = {
+				has_socialist_government = yes
+				
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			declare_war_on = {
+				target = JAP
+				type = annex_everything
+			}	
+		}
+	}
+	focus = {
+		id = CPC_jiefdny
+		icon = asia
+		x = 2
+		y = 4
+		prerequisite = {focus = CPC_ameica focus = CPC_eu_inc focus = CPC_marxism}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = dny
+		}
+	}
+	focus = {
+		id = CPC_jiefangrus
+		icon = war_against_russia
+		x = 4
+		y = 4
+		prerequisite = {focus = CPC_ameica focus = CPC_marxism focus = CPC_eu_inc}
+		relative_position_id = CPC_waijiao
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			RUS = {exists = yes}
+		}
+		
+		bypass = {
+			SOV = {exists = yes}
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			561 = {add_claim_by = CPC}
+			560 = {add_claim_by = CPC}
+			657 = {add_claim_by = CPC}
+			561 = {add_claim_by = CPC}
+			537 = {add_claim_by = CPC}
+			408 = {add_claim_by = CPC}
+			409 = {add_claim_by = CPC}
+			
+			declare_war_on = {
+				target = RUS
+				type = annex_everything
+			}		}
+	}
+	#加入国民党政府
+	focus = {
+		id = CPC_joinkmt
+		icon = chinese_nationalism
+		x = 8
+		y = 1
+		mutually_exclusive = {focus = CPC_gaizupatry}
+		prerequisite = {focus = CPC_shanghai}
+		relative_position_id = CPC_shanghai
+		
+		cost = 2.5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			CHI = { exists = yes }
+			always = no
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			set_cosmetic_tag = shanghai
+			CHI = {
+				puppet = CPC
+			}
+		}
+	}
+	focus = {
+		id = CPC_joinkmtzf
+		icon = chinese_social_democracy
+		x = 8
+		y = 2
+		prerequisite = {focus = CPC_joinkmt}
+		relative_position_id = CPC_shanghai
+		
+		cost = 2.5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			LEP = { exists = NO }
+			ANQ = { exists = NO }
+			CHI = { exists = YES
+				OR = {
+					CHI = {			has_full_control_of_state = 613}
+					has_full_control_of_state = 613
+					
+				}
+			}
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			every_unit_leader = {
+				set_nationality = CHI
+			}
+			CHI = {
+				annex_country = {
+					target = CPC
+					transfer_troops = yes
+				}
+				change_tag_from = ROOT
+				
+			}
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = CPC_red_army
+		icon = Peoples_Liberation_Army_2
+		x = 14
+		y = -2
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			has_completed_focus = CPC_gaizupatry
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			army_experience = 50
+			random_owned_controlled_state = {	
+				prioritize = { 743 }
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}	
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}			
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}	
+	focus = {
+		id = CPC_jizhong
+		icon = military_academy
+		x = -2
+		y = 1
+		prerequisite = {focus = CPC_red_army}
+		relative_position_id = CPC_red_army
+		mutually_exclusive = {focus = CPC_chiweidui }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.05}
+			random_owned_controlled_state = {	
+				prioritize = { 743 }
+				create_unit = {
+					division = "division_template = \"赤卫队正规军\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队正规军\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+			}
+			add_tech_bonus = {
+				name = CPC_jizhong
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_ideas = CPC_central_military_commission
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	focus = {
+		id = CPC_zzwy
+		icon = army_doctrine
+		x = -3
+		y = 2
+		prerequisite = {focus = CPC_jizhong}
+		relative_position_id = CPC_red_army
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+			popularity = 0.05}
+			add_ideas = CPC_zzwy	
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	focus = {
+		id = CPC_sbwyh
+		icon = volunteers
+		x = -1
+		y = 2
+		prerequisite = {focus = CPC_jizhong}
+		relative_position_id = CPC_red_army
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_sbwyh
+			add_popularity = {
+				ideology = radical_socialist
+			popularity = 0.05}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	focus = {
+		id = CPC_zguihua
+		icon = conscription
+		x = -2
+		y = 3
+		prerequisite = {focus = CPC_sbwyh }
+		prerequisite = {focus = CPC_zzwy }
+		
+		relative_position_id = CPC_red_army
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			LEP = {exists = no}
+			CHI = {exists = no}
+			ANQ = {exists = no}
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = chiredarmy
+			hidden_effect = {
+				remove_ideas = {
+					CPC_sbwyh
+					CPC_zzwy
+					CPC_workredarmy
+				}
+				add_ideas = CPC_redarmy
+			}
+			add_tech_bonus = {
+				name = CPC_jizhong
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	focus = {
+		id = CPC_chiweidui
+		icon = GFX_goal_army_guy_2
+		x = 2
+		y = 1
+		prerequisite = {focus = CPC_red_army}
+		relative_position_id = CPC_red_army
+		mutually_exclusive = {focus = CPC_jizhong }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {	
+				prioritize = { 743 }
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+				create_unit = {
+					division = "division_template = \"赤卫队\" start_experience_factor = 0.1	start_equipment_factor = 1"
+					owner = CPC
+					prioritize_location = 743
+				}
+			}
+			swap_ideas = {
+				add_idea = CPC_workredarmy1
+				remove_idea = CPC_workredarmy
+				
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}	
+	focus = {
+		id = CPC_qvzxin
+		icon = coalition_army
+		x = 3
+		y = 2
+		prerequisite = {focus = CPC_chiweidui}
+		relative_position_id = CPC_red_army
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.05}
+			add_ideas = CPC_qvzxin
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	focus = {
+		id = CPC_xjujung
+		icon = democracy6
+		x = 1
+		y = 2
+		prerequisite = {focus = CPC_chiweidui}
+		relative_position_id = CPC_red_army
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = CPC_xjujung
+			add_popularity = {
+				ideology = syndicalist
+			popularity = 0.05}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}		
+	focus = {
+		id = CPC_decarmy
+		icon = Communal_Militias
+		x = 2
+		y = 3
+		prerequisite = {focus = CPC_xjujung }
+		prerequisite = {focus = CPC_qvzxin}
+		relative_position_id = CPC_red_army
+		cost = 20
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			custom_effect_tooltip = chiweidui
+			hidden_effect = {
+				remove_ideas = {
+					CPC_workredarmy1
+					CPC_qvzxin
+					CPC_xjujung
+				}
+				add_ideas = CPC_workredarmy4
+				
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		
+	}
+	
+	focus = {
+		id = CPC_armee_de_lair
+		icon = Peoples_Liberation_Air_Force
+		x = 14
+		y = 2
+		cost = 6
+		available = {
+			has_completed_focus = CPC_red_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_armee_de_lair"
+			air_experience = 50
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+	
+	focus = {
+		id = CPC_amateur_pilots
+		icon = GFX_goal_ELS_Basic_Fighter_Development
+		x = -2
+		y = 1
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_armee_de_lair
+		}
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_amateur_pilots"
+			air_experience = 25
+			add_ideas = FRA_amateur_pilots_idea
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+	
+	focus = {
+		id = CPC_ecole_air
+		icon = GFX_goal_DOM_Air_Fuel
+		x = -2
+		y = 2
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_amateur_pilots
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_ecole_air"
+			add_ideas = FRA_ecole_air_idea
+		}
+	}
+	
+	focus = {
+		id = CPC_air_bases
+		icon = GFX_focus_generic_air_defense2
+		x = 0
+		y = 1
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_armee_de_lair
+		}
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_air_bases"
+			random_owned_controlled_state = {
+				prioritize = { 763 }
+				limit = {
+					air_base < 8
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				limit = {
+					air_base < 8
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1044 }
+				limit = {
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 596 }
+				limit = {
+					air_base < 10
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	focus = {
+		id = CPC_valin_doctrine
+		icon = GFX_goal_air_armada
+		x = 2
+		y = 1
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_armee_de_lair
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_valin_doctrine"
+			add_tech_bonus = {
+				name = CPC_valin_doctrine
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_fighters
+		icon = GFX_goal_generic_air_fighter2_new
+		x = 1
+		y = 2
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_valin_doctrine
+		}
+		mutually_exclusive = {
+			focus = CPC_bombers
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_fighters"
+			add_tech_bonus = {
+				name = CPC_fighters
+				bonus = 1
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_bombers
+		icon = GFX_goal_generic_air_tactical_bomber_new
+		x = 3
+		y = 2
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_valin_doctrine
+		}
+		mutually_exclusive = {
+			focus = CPC_fighters
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_bombers"
+			add_tech_bonus = {
+				name = CPC_bombers
+				bonus = 1
+				uses = 2
+				category = tactical_bomber
+				category = cas_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_strat_bombers
+		icon = GFX_goal_Combined_Bomber_Offensive
+		x = 3
+		y = 3
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_bombers
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_strat_bombers"
+			add_tech_bonus = {
+				name = CPC_strat_bombers
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_paratroopers
+		icon = GFX_focus_generic_paratrooper
+		x = 1
+		y = 3
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_fighters
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_paratroopers"
+			add_tech_bonus = {
+				name = CPC_paratroopers
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_rocket_development
+		icon = GFX_focus_rocketry
+		x = -1
+		y = 3
+		relative_position_id = CPC_armee_de_lair
+		prerequisite = {
+			focus = CPC_fighters
+			focus = CPC_bombers
+		}
+		prerequisite = {
+			focus = CPC_ecole_air
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_rocket_development"
+			add_tech_bonus = {
+				name = CPC_rocket_development
+				bonus = 1
+				uses = 1
+				category = rocketry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = CPC_navy_focus
+		icon = Peoples_Liberation_Navy
+		x = 14
+		y = 6
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = CPC_red_army
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CPC_navy_focus"
+			navy_experience = 50
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 30
+				producer = CPC
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CPC_navy_army
+		icon = naval_dockyard
+		x = 0
+		y = 1
+		relative_position_id = CPC_navy_focus
+		prerequisite = {
+			focus = CPC_navy_focus
+		}
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = "现在国家计划委员会可以建设海军船坞了"
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CPC_navy_maiyi
+		icon = coastal_fort
+		x = -2
+		y = 2
+		relative_position_id = CPC_navy_focus
+		prerequisite = {
+			focus = CPC_navy_army
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = CPC_navy_maiyi
+				bonus = 1
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CPC_navy_qianting
+		icon = wolfpacks
+		x = 0
+		y = 2
+		relative_position_id = CPC_navy_focus
+		prerequisite = {
+			focus = CPC_navy_army
+		}
+		cost = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = CPC_navy_qianting
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = CPC_navy_qianting
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	focus = {
+		id = CPC_navy_frajiu
+		icon = cruisers
+		x = 2
+		y = 2
+		relative_position_id = CPC_navy_focus
+		prerequisite = {
+			focus = CPC_navy_army
+		}
+		cost = 15
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_in_home_area = yes
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = CPC_navy_dmwa
+		icon = navy3
+		x = 0
+		y = 3
+		relative_position_id = CPC_navy_focus
+		prerequisite = {
+			focus = CPC_navy_frajiu
+		}
+		prerequisite = {
+			focus = CPC_navy_qianting
+		}	
+		prerequisite = {
+			focus = CPC_navy_maiyi
+		}		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = CPC_navy_dmwa
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = CPC_navy_dmwa
+				bonus = 1
+				uses = 2
+				category = trade_interdiction_tree
+			}
+			add_ideas = CPC_navy_dmwa
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+}

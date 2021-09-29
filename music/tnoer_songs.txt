@@ -1,0 +1,206 @@
+music_station = "TNOter"
+music = {
+	song = "唐朝乐队——国际歌"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "歌唱祖国"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "三大纪律八项注意"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+
+music = {
+	song = "长城谣"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "东方红"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "L'International"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "国际歌_俄语"
+	chance = {
+		modifier = {
+			factor = 4
+		}
+	}
+}
+music = {
+	song = "莫斯科——北京"
+	chance = {
+		modifier = {
+			factor = 4
+		}
+	}
+}
+music = {
+	song = "中国人民解放军军歌"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "中国人民志愿军战歌"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "毛主席的战士最听党的话"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "没有共产党就没有新中国"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "苏联颂"
+	chance = {
+		modifier = {
+			factor = 4
+		}
+	}
+}
+music = {
+	song = "团结就是力量"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "十送红军"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "惊雷——未遂"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "咱们工人有力量"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "中华人民共和国国歌"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "毕业歌"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "国际歌"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "社会主义好"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}
+music = {
+	song = "春天的故事"
+	chance = {
+		modifier = {
+			factor = 4
+		}
+	}
+}
+music = {
+	song = "全世界无产者联合起来"
+	chance = {
+		modifier = {
+			factor = 5
+		}
+	}
+}
+music = {
+	song = "走进新时代"
+	chance = {
+		modifier = {
+			factor = 3
+		}
+	}
+}
+music = {
+	song = "自动化"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 100
+has_country_flag = cpc_Automation
+		}
+	}
+}

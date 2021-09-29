@@ -1,0 +1,215 @@
+spriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_CPC_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/prc_artillery_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/prc_motorised_infantry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/prc_mechanised_infantry.dds"	
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/prc_mechanised_infantry2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/prc_mechanised_infantry3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_motorised_equipment_medium"
+		texturefile = "gfx/interface/technologies/prc_motorised_infantry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/prc_motorised_infantry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/China/chi_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_CPC_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/China/QIE_infantry_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_CPC_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/China/chi_infantry_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_CPC_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/China/chi_infantry_equipment_0.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_adv_heavy_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_adv_medium_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_adv_light_tank.dds"	
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_basic_heavy_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_imp_heavy_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_basic_medium_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_basic_light_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_imp_medium_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_imp_light_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_main_battle_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/prc_superheavy_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_gwtank_medium"
+		texturefile = "gfx/interface/technologies/chi_gwtank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/prc_early_fighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/prc_early_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_fighter1_medium"
+		texturefile = "gfx/interface/technologies/prc_fighter1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_fighter2_medium"
+		texturefile = "gfx/interface/technologies/prc_fighter2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_fighter3_medium"
+		texturefile = "gfx/interface/technologies/prc_fighter3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/prc_heavy_fighter1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/prc_heavy_fighter2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/prc_heavy_fighter3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_CAS1_medium"
+		texturefile = "gfx/interface/technologies/prc_cas1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_CAS2_medium"
+		texturefile = "gfx/interface/technologies/prc_cas2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_CAS3_medium"
+		texturefile = "gfx/interface/technologies/prc_cas3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/prc_tactical_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/prc_tactical_bomber2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/prc_tactical_bomber3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/prc_strategic_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/prc_strategic_bomber2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/prc_strategic_bomber3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/prc_naval_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/prc_naval_bomber2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_CPC_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/prc_naval_bomber3.dds"
+	}
+	
+}

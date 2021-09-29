@@ -1,0 +1,11 @@
+CPC_plan_ecm = {
+	enable = {always = yes}
+	icon = GFX_idea_IRE_medium_industry
+	
+	consumer_goods_factor = cpc_plan1
+	production_factory_max_efficiency_factor = CPC_plan2
+	local_resources_factor = CPC_plan3
+	global_building_slots_factor = CPC_plan4
+	production_speed_buildings_factor = CPC_plan5
+	research_speed_factor = CPC_research
+}

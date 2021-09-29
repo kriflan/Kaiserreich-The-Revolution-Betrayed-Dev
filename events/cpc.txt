@@ -1,0 +1,1204 @@
+add_namespace = cpc
+country_event = {
+	id = cpc.1
+	title = cpc.1.t
+	desc = cpc.1.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.1.o1
+		ai_chance = {
+			factor = 50
+			
+		}
+		
+	}
+}
+country_event = {
+	id = cpc.2
+	title = cpc.2.t
+	desc = cpc.2.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.2.o1
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+country_event = {
+	id = cpc.3
+	title = cpc.3.t
+	desc = cpc.3.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.3.o1
+		trigger = {
+			CPC = {
+				not = {has_country_flag = pugre_mao }
+			}
+		}
+		CPC = {
+			country_event = { id = cpc.4 days = 3 }
+			
+			set_country_flag = mao_zedong
+			
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		set_party_name = { ideology = radical_socialist name = "中国共产党" long_name = "中国共产党"  }
+		add_popularity = {
+			ideology = social_democrat
+		popularity = 0.30}
+		add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.50}
+		create_country_leader = {
+			name = "毛泽东"
+			desc = ""
+			picture = "gfx/leaders/CPC/mao_zedong.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.3.o2
+		trigger = {
+			CPC = {
+				not = {has_country_flag = pugre_mao }
+			}
+		}
+		CPC = {
+			country_event = { id = cpc.4 days = 3 }
+			
+			set_country_flag = tagandmao
+		}
+		set_party_name = { ideology = radical_socialist name = "中国共产党" long_name = "中国共产党"  }
+		
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.50}
+		add_popularity = {
+			ideology = social_democrat
+		popularity = 0.30}
+		create_country_leader = {
+			name = "毛泽东"
+			desc = ""
+			picture = "gfx/leaders/CPC/mao_zedong.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+		}
+		ai_chance = {factor = 50
+			modifier = {
+				factor = 100
+				has_government = social_democrat
+			}
+		}
+	}
+	option = {	
+		name = cpc.3.o3
+		CPC = {
+			country_event = { id = cpc.4 days = 3 }
+			set_country_flag = pugre_mao
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.40
+		}
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.4
+	title = cpc.4.t
+	desc = cpc.4.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.4.o1
+		trigger = {
+			not = {has_country_flag = pugre_mao }
+			has_country_flag = mao_zedong
+		}
+		create_field_marshal = {
+			name = "毛泽东"
+			desc = ""
+			portrait_path = "gfx/leaders/CPC/mao_zedong.dds"
+			traits = {
+				brilliant_strategist
+				infantry_officer
+				trait_mountaineer
+				trickster
+				commando
+				brilliant_strategist
+			}
+			id = 1978
+			
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		annex_country = {
+			target = HNN
+			transfer_troops = no
+		}
+		every_state = {		
+			limit = {
+				is_core_of = HNN
+			}					
+			add_core_of = ROOT
+		}
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.4.o2
+		trigger = {
+			has_country_flag = tagandmao
+			not = {has_country_flag = pugre_mao}
+			
+		}	
+		create_field_marshal = {
+			name = "毛泽东"
+			desc = ""
+			portrait_path = "gfx/leaders/CPC/mao_zedong.dds"
+			traits = {
+				brilliant_strategist
+				infantry_officer
+				trait_mountaineer
+				trickster
+				commando
+				brilliant_strategist
+			}
+			id = 1978
+			
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+			name = "彭德怀"
+			desc = "POLITICS_HNN_PENG_DEHUAI_ARMY_DESC"
+			portrait_path = "gfx/leaders/HNN/Portrait_Hunan_Peng_Dehuai.png"
+			traits = {
+				offensive_doctrine
+				infantry_officer
+				career_officer
+				commando
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		
+		create_field_marshal = {
+			name = "唐生智"
+			desc = ""
+			portrait_path = "gfx/leaders/HNN/Portrait_Hunan_Tang_Shengzhi.png"
+			traits = {
+				commando
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		annex_country = {
+			target = HNN
+			transfer_troops = yes
+		}
+		every_state = {		
+			limit = {
+				is_core_of = HNN
+			}					
+			add_core_of = ROOT
+		}
+		ai_chance = {factor = 50}
+	}
+	
+	option = {	
+		name = cpc.4.o3
+		trigger = {
+			has_country_flag = pugre_mao
+		}		
+		declare_war_on = {
+			target = HNN
+			type = annex_everything
+		}	
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.5
+	title = cpc.5.t
+	desc = cpc.5.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.5.o1
+		CPC = {
+			annex_country = {
+			    target = ROOT
+			    transfer_troops = yes
+			}
+		}
+		every_unit_leader = {
+			set_nationality = CPC
+		}
+		ai_chance = {factor = 30
+			modifier = {
+				factor = 80
+				has_government = social_democrat
+			}
+		}
+	}
+	option = {	
+		name = cpc.5.o2
+		CPC = {			
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}			
+		ai_chance = {factor = 60}
+	}
+}
+country_event = {
+	id = cpc.6
+	title = cpc.6.t
+	desc = cpc.6.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.6.o1
+		CPC = {
+			add_to_faction = ROOT
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 60
+				has_socialist_government = yes
+			}
+		}
+	}
+	option = {	
+		name = cpc.6.o2
+		set_country_flag = cpc_nof
+		ai_chance = {factor = 40}
+	}
+}
+country_event = {
+	id = cpc.7
+	title = cpc.7.t
+	desc = cpc.7.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.7.o1
+		complete_national_focus = CPC_joinkmt
+		
+		ai_chance = {factor = 100}
+	}
+	option = {	
+		name = cpc.7.o2
+		country_event = { id = cpc.8 days = 3 }
+		ai_chance = {factor = 0}
+	}
+}
+country_event = {
+	id = cpc.8
+	title = cpc.8.t
+	desc = cpc.8.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.8.o1
+		country_event = { id = cpc.9 days = 3 }
+		
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.8.o2
+		set_country_flag = wjw_zbcg
+		country_event = { id = cpc.9 days = 6 }
+		
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.9
+	title = cpc.9.t
+	desc = cpc.9.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.9.o1
+		country_event = { id = cpc.10 days = 1 }
+		
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.10
+	title = cpc.10.t
+	desc = cpc.10.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.10.o1
+		trigger = {
+			OR = {
+				NOT = {		
+					has_country_flag = wjw_zbcg
+				}
+				CHI = { exists = NO }
+				
+			}
+		}		
+		country_event = { id = cpc.11 days = 2 }
+		country_event = { id = cpc.13 days = 10 }
+		
+		complete_national_focus = CPC_gaizupatry
+		
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.10.o2
+		trigger = {
+			CHI = { exists = YES }
+			has_country_flag = wjw_zbcg
+		} 
+		complete_national_focus = CPC_joinkmt
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.11
+	title = cpc.11.t
+	desc = cpc.11.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.11.o1
+		country_event = { id = cpc.12 days = 15 }
+		CHI = {
+			declare_war_on = {
+				target = CPC
+				type = annex_everything
+			}
+		}
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.12
+	title = cpc.12.t
+	desc = cpc.12.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.12.o1
+		add_popularity = {
+			ideology = totalist
+		popularity = 0.05}
+		
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.12.o2
+		add_popularity = {
+			ideology = syndicalist
+		popularity = 0.03}
+		add_political_power = 50
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.13
+	title = cpc.13.t
+	desc = cpc.13.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.13.o1
+		set_party_name = { ideology = social_democrat name = "民革" long_name = "中国国民党革命委员会"  }
+		add_political_power = 50
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.14
+	title = cpc.14.t
+	desc = cpc.14.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.14.o1
+		country_event = { id = cpc.15 days = 6 }
+		ai_chance = {factor = 50}
+	}
+	
+}
+country_event = {
+	id = cpc.15
+	title = cpc.15.t
+	desc = cpc.15.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.15.o1
+		trigger = {
+			not = {has_government = totalist }
+		}
+		set_country_flag = feb 
+		country_event = { id = cpc.16 days = 6 }
+		
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.15.o2	
+		set_country_flag = danyi
+		country_event = { id = cpc.16 days = 6 }
+		
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.16
+	title = cpc.16.t
+	desc = cpc.16.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.16.o1
+		trigger = {
+			has_country_flag = feb
+		}
+		set_country_flag = ssmzghg
+		country_event = { id = cpc.17 days = 6 }
+		
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.16.o2
+		trigger = {OR = {
+			has_country_flag = danyi
+			has_country_flag = feb
+		}
+		}
+		set_country_flag = mzqyzz
+		country_event = { id = cpc.17 days = 10 }
+		
+ 		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.16.o3
+		trigger = {
+			has_country_flag = danyi
+		}
+		set_country_flag = hanhua
+		country_event = { id = cpc.17 days = 10 }
+		
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.17
+	title = cpc.17.t
+	desc = cpc.17.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.17.o1
+		trigger = {
+			has_country_flag = feb
+			has_country_flag = ssmzghg
+		}
+		set_country_flag = syndicalism_china
+		set_politics = {
+			ruling_party = syndicalist
+			last_election = "1936.10.10"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.20
+		}
+		hidden_effect = {
+			remove_ideas = {
+				CPC_Li_Dazhao_hog_syn
+				CPC_Dong_Biwu_for_syn
+				CPC_Li_Lisan_eco_tot
+				CPC_Deng_Zhongxia_sec_syn
+				
+			}
+			add_ideas = {
+				CPC_Li_Fuchun_hog_rso
+				CPC_Su_Zhaozheng_for_syn
+				CPC_Deng_Zihui_eco_syn
+				CPC_Deng_Zhongxia_sec_syn
+			}
+			
+		}
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.17.o2
+		trigger = {
+			not = {has_government = totalist }
+			OR = {
+				has_country_flag = feb
+			has_country_flag = danyi}
+			OR = {
+				has_country_flag = ssmzghg
+			has_country_flag = mzqyzz }
+		}
+		set_country_flag = soviet_china		
+		add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.10}
+		set_politics = {
+			ruling_party = radical_socialist
+			last_election = "1936.10.10"
+			election_frequency = 60
+			elections_allowed = no
+		}
+		remove_ideas = {
+			CPC_Li_Dazhao_hog_syn
+			CPC_Dong_Biwu_for_syn
+			CPC_Li_Lisan_eco_tot
+			CPC_Deng_Zhongxia_sec_syn
+			
+		}
+		add_ideas = {
+			CPC_Li_Dazhao_hog_syn
+			CPC_Dong_Biwu_for_syn
+			CPC_Li_Lisan_eco_tot
+			CPC_Deng_Zhongxia_sec_syn
+		}
+ 		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.17.o3
+		trigger = {
+			has_country_flag = danyi
+			OR = {
+				has_country_flag = mzqyzz
+				has_country_flag = hanhua
+			}
+		}
+		set_country_flag = cpc_china
+		add_popularity = {
+			ideology = totalist
+		popularity = 0.20}
+		
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1936.10.10"
+			election_frequency = 60
+			elections_allowed = no
+		}
+		if = {
+			limit = {has_country_flag = mao_china }
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes	
+		}
+		else_if = {
+			limit = {
+				not = {has_country_flag = mao_china }
+			}
+			add_ideas = {
+				CPC_Shao_Shiping_hog_syn
+				CPC_Qu_Qiubai_for_syn
+				CPC_Hua_Kezhi_sec_syn
+				CPC_Deng_Xiaoping_eco_rso
+			}
+			remove_ideas = {
+				CPC_Li_Dazhao_hog_syn
+				CPC_Dong_Biwu_for_syn
+				CPC_Li_Lisan_eco_tot
+				CPC_Deng_Zhongxia_sec_syn
+			}
+			add_popularity = {
+				ideology = market_liberal
+			popularity = 0.15}
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			add_to_coalition = yes
+		}	
+		hidden_effect = {
+			
+			
+			
+			
+		}
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.18
+	title = cpc.18.t
+	desc = cpc.18.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.18.o1
+		CPC = {
+			transfer_state = 744
+			transfer_state = 996
+			transfer_state = 728
+			transfer_state = 326
+			transfer_state = 729
+		}
+		ai_chance = {factor = 50
+			modifier = {
+				factor = 80
+				strength_ratio = {
+					tag = CPC
+					ratio < 1.2
+				}			}
+		}
+	}
+	option = {	
+		name = cpc.18.o2
+		
+		CPC = {
+			annex_country = {
+			    target = ROOT
+			    transfer_troops = no
+			}
+		}
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.19
+	title = cpc.19.t
+	desc = cpc.19.d
+	picture = GFX_report_event_JAP_economy_building
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.19.o1
+		CPC = {
+			add_ideas = CPC_inte
+			add_opinion_modifier = {
+				target = JAP
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = CAN
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = GEA
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = MAF
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = NFA
+				modifier = embargo
+			}
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = CPC
+				modifier = embargo
+			}
+		}	
+		USA = {				add_opinion_modifier = {
+			target = CPC
+			modifier = embargo
+		}}
+		CAN = {				add_opinion_modifier = {
+			target = CPC
+			modifier = embargo
+		}}
+		GER = {				add_opinion_modifier = {
+			target = CPC
+			modifier = embargo
+		}}
+		GEA = {				add_opinion_modifier = {
+			target = CPC
+			modifier = embargo
+		}}
+		MAF = {				add_opinion_modifier = {
+			target = CPC
+			modifier = embargo
+		}}
+		NFA = {
+			add_opinion_modifier = {
+				target = CPC
+				modifier = embargo
+			}
+		}
+		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.20
+	title = cpc.20.t
+	desc = cpc.20.d
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.20.o1
+		CPC = {
+			annex_country = {
+			    target = ROOT
+			    transfer_troops = no
+			}
+		}
+		JAP = {
+			declare_war_on = {
+				target = CPC
+				type = annex_everything
+			}
+			
+		}				set_global_flag = FNG_relations_JAP_broke
+		set_potential_national_government = yes
+		FNG_CA_remove = yes
+		FNG_mantetsu_collapse = yes
+		ai_chance = {factor = 10
+			modifier = {
+				factor = 100
+				strength_ratio = {
+					tag = CPC
+					ratio < 1.5
+				}			}
+		}
+	}
+	option = {	
+		name = cpc.5.o2
+		CPC = {			
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}			
+		ai_chance = {factor = 45}
+	}
+}
+news_event = {
+	id = cpc.21
+	title = cpc.21.t
+	desc = cpc.21.d
+	picture = GFX_news_event_china_unified
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.21.o1
+		add_political_power = 100
+	}
+}
+news_event = {
+	id = cpc.22
+	title = cpc.22.t
+	desc = cpc.22.d
+	picture = GFX_news_event_capture_shanghai
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.22.o1
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = cpc.23
+	title = cpc.23.t
+	desc = cpc.23.d
+	picture = GFX_report_event_CHI_vote
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.23.o1
+		create_country_leader = {
+			name = "毛泽东"
+			desc = "POLITICS_CPC_MAOZEDONG_DESC"
+			picture = "gfx/leaders/CPC/mao_zedong.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = {
+				hog_the_peasant_marshal
+			}
+		}
+		set_party_name = { ideology = radical_socialist name = "中国农工党" long_name = "中国共产主义农民与工人党"  }
+		set_politics = {
+			ruling_party = radical_socialist
+			last_election = "1940.10.1"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes	
+		remove_ideas = {
+			CPC_Li_Dazhao_hog_syn
+			CPC_Dong_Biwu_for_syn
+			CPC_Li_Lisan_eco_tot
+			CPC_Deng_Zhongxia_sec_syn
+			
+		}
+		add_ideas = {
+			CPC_Zhouenlai_hog
+			CPC_Dong_Biwu_for_syn
+			CPC_Gao_gang_eco
+			CPC_Xiangjingyu_sec
+			
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.23.o2
+		add_popularity = {
+			ideology = radical_socialist
+		popularity = 0.10}
+		create_country_leader = {
+			name = "郑超麟"
+			desc = "POLITICS_CPC_zhengchaolin_DESC"
+			picture = "gfx/leaders/CPC/zhengchaolin.dds"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = {
+				hog_ambitious_union_boss
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			last_election = "1940.10.1"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes	
+ 		ai_chance = {factor = 50}
+	}
+	option = {	
+		name = cpc.23.o3
+		create_country_leader = {
+			name = "刘少奇"
+			desc = "POLITICS_CHI_LIUSHAOQI_DESC"
+			picture = "gfx/leaders/CPC/Liu_Shaoqi.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+			traits = {
+				hog_pragmatic_statesman
+			}
+		}
+		set_party_name = { ideology = social_democrat name = "中国社会民主工党" long_name = "中国社会民主工人党"  }
+		
+		add_popularity = {
+			ideology = social_democrat
+		popularity = 0.35}
+		add_popularity = {
+			ideology = market_liberal
+		popularity = 0.15}
+		set_politics = {
+			ruling_party = social_democrat
+			last_election = "1940.10.10"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes	
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes	
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes	
+		hidden_effect = {
+			remove_ideas = {
+				CPC_Li_Dazhao_hog_syn
+				CPC_Dong_Biwu_for_syn
+				CPC_Li_Lisan_eco_tot
+				CPC_Deng_Zhongxia_sec_syn
+				
+			}
+			add_ideas = {
+				CPC_Zhouenlai_hog
+				CPC_Dong_Biwu_for_syn
+				CPC_Chenyun_eco
+				CPC_Xiangjingyu_sec
+			}
+			
+		}
+ 		ai_chance = {factor = 50}
+	}
+}
+country_event = {
+	id = cpc.24
+	title = cpc.24.t
+	desc = cpc.24.d
+	picture = GFX_cpcbigyuejin
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.25 days = 30 }
+		}
+	}
+	option = {	
+		name = cpc.24.o1
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = cpc.25
+	title = cpc.25.t
+	desc = cpc.25.d
+	picture = GFX_cpcbigyuejin
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.26 days = 30 }
+		}
+	}
+	option = {	
+		name = cpc.25.o1
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = cpc.26
+	title = cpc.26.t
+	desc = cpc.26.d
+	picture = GFX_cpcbigyuejin
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.27 days = 60 }
+		}
+	}
+	option = {	
+		name = cpc.26.o1
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = cpc.27
+	title = cpc.27.t
+	desc = cpc.27.d
+	picture = GFX_report_event_CHI_successful_northern_expedition_people
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.28 days = 60 }
+		}
+	}
+	option = {	
+		name = cpc.27.o1
+		add_ideas = CPC_dajihuang
+		
+	}
+}
+country_event = {
+	id = cpc.28
+	title = cpc.28.t
+	desc = cpc.28.d
+	picture = GFX_report_event_CHI_victory
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.29 days = 60 }
+		}
+	}
+	option = {	
+		name = cpc.28.o1
+		add_popularity = {
+			ideology = radical_socialist
+		popularity = -0.25}
+		remove_unit_leader = 1942
+		remove_unit_leader = 1919
+		remove_unit_leader = 1917
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = cpc.29
+	title = cpc.29.t
+	desc = cpc.29.d
+	picture = GFX_report_event_CHI_victory
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = cpc.30 days = 30 }
+		}
+	}
+	option = {	
+		name = cpc.29.o1
+		remove_unit_leader = 1927
+		add_popularity = {
+			ideology = syndicalist
+		popularity = -0.25}
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = cpc.30
+	title = cpc.30.t
+	desc = cpc.30.d
+	picture = GFX_report_event_CHI_victory3
+	is_triggered_only = yes
+	option = {	
+		name = cpc.30.o1
+		remove_unit_leader = 1978
+		hidden_effect = {
+			country_event = { id = cpc.31 days = 30 }
+		}
+		ai_chance = {factor = 50}
+		
+		set_country_flag = pugre_mao
+	}
+	option = {	
+		name = cpc.30.o2
+		ai_chance = {factor = 50}
+		
+		set_country_flag = mao_china
+		create_country_leader = {
+			name = "毛泽东"
+			desc = ""
+			picture = "gfx/leaders/CPC/mao_zedong.dds"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+			traits = {
+				sec_man_of_the_people
+				
+			}
+		}
+		hidden_effect = {
+			country_event = { id = cpc.31 days = 7 }
+			country_event = { id = cpc.32 days = 365 }
+			
+		}
+		remove_ideas = {
+			CPC_Liushaoqi_hog
+			CPC_Qu_Qiubai_for_syn
+			CPC_wangheshou_eco
+			CPC_Kangsheng_sec
+			
+		}
+		add_ideas = {
+			CPC_linbiao_hog
+			CPC_Dong_Biwu_for_syn
+			CPC_Chenyun_eco
+			CPC_Xiangjingyu_sec
+		}
+		
+	}
+}
+country_event = {
+	id = cpc.31
+	title = cpc.31.t
+	desc = cpc.31.d
+	picture = GFX_report_event_CHI_warlord_cavalry
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.31.o1
+		remove_ideas = {
+			CPC_bigyuejin_ideas
+			CPC_dajihuang
+		}
+		add_timed_idea = { idea = CPC_dajihuang days = 120 }
+		if = {
+			limit = {
+				not = {has_country_flag = mao_china }
+			}
+			remove_ideas = CPC_wangheshou_eco
+			add_ideas = CPC_Li_Fuchun_eco
+		}
+	}
+}
+country_event = {
+	id = cpc.32
+	title = cpc.32.t
+	desc = cpc.32.d
+	picture = GFX_report_event_CHI_victory
+	is_triggered_only = yes
+	
+	option = {	
+		name = cpc.32.o1
+		remove_ideas = {
+			CPC_Chenyun_eco
+			CPC_kongzi
+		}
+		add_ideas = {
+			CPC_CR
+			CPC_Gao_gang_eco
+		}
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1940.10.1"
+			election_frequency = 24
+			elections_allowed = yes
+		}
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes	
+		ai_chance = {factor = 50}
+		
+	}
+	
+	option = {	
+		name = cpc.32.o2
+		create_country_leader = {
+			name = "林彪"
+			desc = ""
+			picture = "gfx/leaders/CPC/Linbiao.tga"
+			expire = "1965.1.1"
+			ideology = totalist_subtype
+			traits = {
+				for_iron_fisted_brute
+			}
+		}		
+		ai_chance = {factor = 50}
+	}
+}		
