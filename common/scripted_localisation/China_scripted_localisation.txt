@@ -31,6 +31,19 @@ defined_text = {
 
 defined_text = {
 	name = GetFactionAlignment
+	### Puppets ###
+	text = {
+		trigger = {
+			is_subject = yes
+			overlord = { is_han_chinese_tag = no }
+			NOT = {
+				is_subject_of = CPC
+			}
+		}
+		localization_key = "Puppet of [Overlord.GetNameDef]"
+	}
+
+	### Leaders ###
 	text = {
 		trigger = {
 			tag = CPC
@@ -43,7 +56,7 @@ defined_text = {
 			tag = QIE
 			QIE = { has_country_flag = QIE_manchu_restoration }
 		}
-		localization_key = "满清阵营领袖"
+		localization_key = "Manchu Leader"
 	}
 	text = {
 		trigger = {
@@ -58,13 +71,13 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "直系阵营领袖"
+		localization_key = "Zhili Leader"
 	}
 	text = {
 		trigger = {
 			tag = FNG
 		}
-		localization_key = "安国军阵营领袖"
+		localization_key = "Anguojun Leader"
 	}
 	text = {
 		trigger = {
@@ -77,7 +90,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "国民党左派阵营领袖"
+		localization_key = "Left Kuomintang Leader"
 	}
 	text = {
 		trigger = {
@@ -94,13 +107,13 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "国民党右派阵营领袖"
+		localization_key = "Right Kuomintang Leader"
 	}
 	text = {
 		trigger = {
 			tag = NPA
 		}
-		localization_key = "护国联盟阵营领袖"
+		localization_key = "NPA Leader"
 	}
 	text = {
 		trigger = {
@@ -115,13 +128,10 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "联省自治阵营领袖"
+		localization_key = "Federalist Leader"
 	}
-	
-	###################
+
 	### Non-Leaders ###
-	###################
-	
 	text = {
 		trigger = {
 			count_triggers = {
@@ -131,7 +141,17 @@ defined_text = {
 				is_ruled_by_pro_fengtian = yes
 			}
 		}
-		localization_key = "机会主义者"
+		localization_key = "Opportunistic"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = SOC_TIB
+				has_cosmetic_tag = SOC_MON
+				has_cosmetic_tag = SOC_SIK
+			}
+		}
+		localization_key = "共产主义派"
 	}
 	text = {
 		trigger = {
@@ -141,74 +161,62 @@ defined_text = {
 			}
 			is_ruled_by_pro_manchu = yes
 		}
-		localization_key = "满清派"
+		localization_key = "Manchu-aligned"
 	}
 	text = {
 		trigger = {
 			is_in_faction_with = NPA
 		}
-		localization_key = "护国联盟成员"
+		localization_key = "NPA Member"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_pro_zhili = yes
 		}
-		localization_key = "直系派"
+		localization_key = "Zhili-aligned"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_pro_fengtian = yes
 		}
-		localization_key = "安国军派"
+		localization_key = "Anguojun-aligned"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_federalists = yes
 			is_ruled_by_kmt = yes
 		}
-		localization_key = "共和派"
+		localization_key = "Republican-aligned"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_kmt = yes
-			AND = {
-				tag = CPC
-				is_subject = yes
-			}
 		}
-		localization_key = "国民党派"
+		localization_key = "KMT-aligned"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_federalists = yes
 		}
-		localization_key = "联省自治派"
+		localization_key = "Federalist-aligned"
 	}
 	text = {
 		trigger = {
 			OR = {
 				tag = MON
 				tag = TIB
+				tag = ETS
+				AND = {
+					tag = KUM
+					has_country_leader = { name = "Hoja-Niyaz" }
+				}
 			}
-			is_subject = no
 		}
-		localization_key = "独立"
+		localization_key = "Independent"
 	}
 	text = {
-		trigger = {
-			OR = {
-				tag = MON
-				tag = TIB
-			}
-			is_subject = yes
-		}
-		localization_key = "[OVERLORD.GetAdjective]傀儡"
+		localization_key = "Unaligned"
 	}
-	
-	text = {
-		localization_key = "未结盟"
-	}
-	
 }
 
 #######################
@@ -232,7 +240,7 @@ defined_text = {
 				state = 728 #Guangzhouwan
 			}
 		}
-		localization_key = "广东省"
+		localization_key = "Guangdong Province"
 	}
 	text = {
 		trigger = {
@@ -244,7 +252,7 @@ defined_text = {
 				state = 1055 #Liujiang
 			}
 		}
-		localization_key = "广西省"
+		localization_key = "Guangxi Province"
 	}
 	text = {
 		trigger = {
@@ -256,7 +264,7 @@ defined_text = {
 				state = 1063 #Cangzhou
 			}
 		}
-		localization_key = "直隶省"
+		localization_key = "Zhili Province"
 	}
 	text = {
 		trigger = {
@@ -267,7 +275,7 @@ defined_text = {
 				state = 1060 #Hebei
 			}
 		}
-		localization_key = "河南省"
+		localization_key = "Henan Province"
 	}
 	text = {
 		trigger = {
@@ -277,7 +285,7 @@ defined_text = {
 				state = 1049 #Shihe
 			}
 		}
-		localization_key = "湖北省"
+		localization_key = "Hubei Province"
 	}
 	text = {
 		trigger = {
@@ -286,7 +294,7 @@ defined_text = {
 				state = 1013 #Chenyuan
 			}
 		}
-		localization_key = "湖南省"
+		localization_key = "Hunan Province"
 	}
 	text = {
 		trigger = {
@@ -297,7 +305,7 @@ defined_text = {
 				state = 1075 #Nantong (concession state)
 			}
 		}
-		localization_key = "江苏省"
+		localization_key = "Jiangsu Province"
 	}
 	text = {
 		trigger = {
@@ -307,7 +315,7 @@ defined_text = {
 				state = 1045 #Xuyang
 			}
 		}
-		localization_key = "江西省"
+		localization_key = "Jiangxi Province"
 	}
 	text = {
 		trigger = {
@@ -316,7 +324,7 @@ defined_text = {
 				state = 799 #Guanzhong
 			}
 		}
-		localization_key = "陕西省"
+		localization_key = "Shaanxi Province"
 	}
 	text = {
 		trigger = {
@@ -326,7 +334,7 @@ defined_text = {
 				state = 1072 #Central Shanxi
 			}
 		}
-		localization_key = "山西省"
+		localization_key = "Shanxi Province"
 	}
 	text = {
 		trigger = {
@@ -340,7 +348,7 @@ defined_text = {
 				state = 996 #Weihaiwei
 			}
 		}
-		localization_key = "山东省"
+		localization_key = "Shandong Province"
 	}
 	text = {
 		trigger = {
@@ -350,7 +358,7 @@ defined_text = {
 				state = 1050
 			}
 		}
-		localization_key = "安徽省"
+		localization_key = "Anhui Province"
 	}
 	text = {
 		trigger = {
@@ -364,7 +372,7 @@ defined_text = {
 				state = 746 #Ningbo
 			}
 		}
-		localization_key = "浙江省"
+		localization_key = "Zhejiang Province"
 	}
 	text = {
 		trigger = {
@@ -377,7 +385,7 @@ defined_text = {
 				state = 747 #Fuzhou
 			}
 		}
-		localization_key = "福建省"
+		localization_key = "Fujian Province"
 	}
 	text = {
 		trigger = {
@@ -389,7 +397,7 @@ defined_text = {
 				state = 788 #Aba
 			}
 		}
-		localization_key = "四川省"
+		localization_key = "Sichuan Province"
 	}
 	text = {
 		trigger = {
@@ -399,7 +407,7 @@ defined_text = {
 				state = 1052 #Zhenyuan
 			}
 		}
-		localization_key = "贵州省"
+		localization_key = "Guizhou Province"
 	}
 	text = {
 		trigger = {
@@ -408,7 +416,7 @@ defined_text = {
 				state = 816 #Dali
 			}
 		}
-		localization_key = "云南省"
+		localization_key = "Yunnan Province"
 	}
 	text = {
 		trigger = {
@@ -417,7 +425,7 @@ defined_text = {
 				state = 604 #Yushu
 			}
 		}
-		localization_key = "青海省"
+		localization_key = "Qinghai Province"
 	}
 	text = {
 		trigger = {
@@ -426,7 +434,7 @@ defined_text = {
 				state = 774 #Hexi Corridor
 			}
 		}
-		localization_key = "甘肃省"
+		localization_key = "Gansu Province"
 	}
 	text = {
 		trigger = {
@@ -434,7 +442,7 @@ defined_text = {
 				state = 348 #Ningxia
 			}
 		}
-		localization_key = "宁夏省"
+		localization_key = "Ningxia Province"
 	}
 	text = {
 		trigger = {
@@ -446,7 +454,7 @@ defined_text = {
 				state = 745 #Kwantung
 			}
 		}
-		localization_key = "奉天省"
+		localization_key = "Fengtian Province"
 	}
 	text = {
 		trigger = {
@@ -456,7 +464,7 @@ defined_text = {
 				state = 886 #Jilin
 			}
 		}
-		localization_key = "吉林省"
+		localization_key = "Jilin Province"
 	}
 	text = {
 		trigger = {
@@ -466,18 +474,18 @@ defined_text = {
 				state = 884 #Xing'an
 			}
 		}
-		localization_key = "黑龙江省"
+		localization_key = "Heilongjiang Province"
 	}
 	text = {
 		trigger = {
 			state = 524
 		}
-		localization_key = "台湾省"
+		localization_key = "Taiwan Province"
 	}
 	text = {
 		trigger = {
 			OR = {
-				#Tianjin concession 
+				#Tianjin concession
 				state = 609 #Tianjin
 				#Shanghai concession
 				state = 743 #Shanghai
@@ -487,7 +495,7 @@ defined_text = {
 				state = 729 #Macao
 			}
 		}
-		localization_key = "前租界"
+		localization_key = "Former Concession"
 	}
 	text = {
 		trigger = {
@@ -497,7 +505,7 @@ defined_text = {
 				state = 1084 #West Mongolia (non-integrable)
 			}
 		}
-		localization_key = "蒙古"
+		localization_key = "Mongolia"
 	}
 	text = {
 		trigger = {
@@ -506,7 +514,7 @@ defined_text = {
 				state = 616 #Ordos
 			}
 		}
-		localization_key = "绥远省"
+		localization_key = "Suiyuan Province"
 	}
 	text = {
 		trigger = {
@@ -514,7 +522,7 @@ defined_text = {
 				state = 610 #Jehol
 			}
 		}
-		localization_key = "热河省"
+		localization_key = "Jehol Province"
 	}
 	text = {
 		trigger = {
@@ -523,7 +531,7 @@ defined_text = {
 				state = 612 #Xilingol (only by MON)
 			}
 		}
-		localization_key = "察哈尔省"
+		localization_key = "Chahar Province"
 	}
 	text = {
 		trigger = {
@@ -537,7 +545,7 @@ defined_text = {
 				state = 1085 #Taklamakan Desert
 			}
 		}
-		localization_key = "新疆省"
+		localization_key = "Xinjiang Province"
 	}
 	text = {
 		trigger = {
@@ -549,7 +557,7 @@ defined_text = {
 				state = 1086 #Changtang (only by TIB)
 			}
 		}
-		localization_key = "西藏"
+		localization_key = "Tibet"
 	}
 }
 
@@ -815,7 +823,7 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				#Tianjin concession 
+				#Tianjin concession
 				state = 609 #Tianjin
 				#Shanghai concession
 				state = 743 #Shanghai
@@ -1153,7 +1161,7 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				#Tianjin concession 
+				#Tianjin concession
 				state = 609 #Tianjin
 				#Shanghai concession
 				state = 743 #Shanghai
@@ -1287,13 +1295,39 @@ defined_text = {
 		trigger = {
 			is_ruled_by_federalists = yes
 		}
-		localization_key = "中华联省"
+		localization_key = "United Provinces of China"
 	}
 	text = {
 		trigger = {
 			is_ruled_by_federalists = no
 		}
-		localization_key = "中华民国"
+		localization_key = "Republic of China"
+	}
+}
+
+defined_text = {
+	name = GFX_news_event_SQI_fall_event_picture
+	text = {
+		trigger = {
+			SQI = {
+				has_country_leader = {
+					name = "Zhang Zongchang"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "GFX_news_event_SQI_fall_zongchang"
+	}
+	text = {
+		trigger = {
+			SQI = {
+				has_country_leader = {
+					name = "Zhang Tianran"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "GFX_news_event_SQI_fall_tianran"
 	}
 }
 
